@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediFlex - Tu Salud es Nuestra Prioridad</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="../css/estilo_usuario/index.css" rel="stylesheet" />
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066cc',
+                        secondary: '#00a8e8',
+                        accent: '#00c9b7',
+                        dark: '#1a1a2e',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans antialiased">
+    <div id="header"></div>
+    <section class="hero-section">
+        <div class="hero-carousel">
+            <!-- Slide 1 -->
+            <div class="hero-slide active" data-slide="1">
+                <div class="hero-bg hero-bg-1"></div>
+                <div class="hero-overlay"></div>
+                <div class="container mx-auto px-4 h-full">
+                    <div class="flex items-center h-full">
+                        <div class="w-full lg:w-1/2 hero-content">
+                            <span class="hero-badge">
+                                <i class="fas fa-heart-pulse"></i>
+                                Servicio Destacado
+                            </span>
+                            <h1 class="hero-title">
+                                Salud para toda<br>
+                                <span>tu familia</span>
+                            </h1>
+                            <p class="hero-subtitle">
+                                Atención médica integral con los mejores especialistas y tecnología de vanguardia. Tu
+                                bienestar es nuestra misión.
+                            </p>
+                            <div class="hero-buttons">
+                                <button class="btn-hero-primary">Afíliate Ahora</button>
+                                <button class="btn-hero-secondary">Más Información</button>
+                            </div>
+                            <div class="hero-features">
+                                <div class="hero-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Cobertura Total</span>
+                                </div>
+                                <div class="hero-feature">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Atención 24/7</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden lg:block lg:w-1/2">
+                            <div class="hero-image">
+                                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=600&fit=crop"
+                                    alt="Familia saludable">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-slide" data-slide="2">
+                <div class="hero-bg hero-bg-2"></div>
+                <div class="hero-overlay"></div>
+                <div class="container mx-auto px-4 h-full">
+                    <div class="flex items-center h-full">
+                        <div class="w-full lg:w-1/2 hero-content">
+                            <span class="hero-badge">
+                                <i class="fas fa-pills"></i>
+                                Nuevo Servicio
+                            </span>
+                            <h1 class="hero-title">
+                                Estado de<br>
+                                <span>Medicamentos</span>
+                            </h1>
+                            <p class="hero-subtitle">
+                                Consulta el estado de tus medicamentos de forma rápida y segura. Gestión digital para tu
+                                comodidad.
+                            </p>
+                            <div class="hero-buttons">
+                                <button class="btn-hero-primary">Consultar Estado</button>
+                                <button class="btn-hero-secondary">Saber Más</button>
+                            </div>
+                            <div class="hero-features">
+                                <div class="hero-feature">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Consulta Online</span>
+                                </div>
+                                <div class="hero-feature">
+                                    <i class="fas fa-shipping-fast"></i>
+                                    <span>Entrega Rápida</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden lg:block lg:w-1/2">
+                            <div class="hero-image">
+                                <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=600&h=600&fit=crop"
+                                    alt="Medicamentos">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide" data-slide="3">
+                <div class="hero-bg hero-bg-3"></div>
+                <div class="hero-overlay"></div>
+                <div class="container mx-auto px-4 h-full">
+                    <div class="flex items-center h-full">
+                        <div class="w-full lg:w-1/2 hero-content">
+                            <span class="hero-badge">
+                                <i class="fas fa-user-circle"></i>
+                                Plataforma Digital
+                            </span>
+                            <h1 class="hero-title">
+                                Portal<br>
+                                <span>Pacientes</span>
+                            </h1>
+                            <p class="hero-subtitle">
+                                Accede a tu historia clínica, agenda citas y gestiona todos tus servicios de salud en un
+                                solo lugar.
+                            </p>
+                            <div class="hero-buttons">
+                                <button class="btn-hero-primary" onclick="window.location.href='/portal'">Ingresar al
+                                    Portal</button>
+                                <button class="btn-hero-secondary">Registrarse</button>
+                            </div>
+                            <div class="hero-features">
+                                <div class="hero-feature">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>100% Seguro</span>
+                                </div>
+                                <div class="hero-feature">
+                                    <i class="fas fa-file-medical"></i>
+                                    <span>Historia Digital</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden lg:block lg:w-1/2">
+                            <div class="hero-image">
+                                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=600&fit=crop"
+                                    alt="Portal Digital">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control prev" id="prevSlide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-control next" id="nextSlide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button class="indicator active" data-slide="1"></button>
+                <button class="indicator" data-slide="2"></button>
+                <button class="indicator" data-slide="3"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="services-section">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Servicio 1 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon-wrapper urgencias">
+                        <div class="service-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                    </div>
+                    <h3 class="service-title">Atención Prioritaria</h3>
+                    <p class="service-description">Servicio de urgencias 24/7 en nuestra red hospitalaria.</p>
+                    <div class="service-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon-wrapper citas">
+                        <div class="service-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                    </div>
+                    <h3 class="service-title">Citas Médicas</h3>
+                    <p class="service-description">Agenda tus citas de manera fácil y rápida.</p>
+                    <div class="service-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon-wrapper medicamentos">
+                        <div class="service-icon">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                    </div>
+                    <h3 class="service-title">Medicamentos</h3>
+                    <p class="service-description">Amplia red de farmacias para tu comodidad.</p>
+                    <div class="service-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon-wrapper especialistas">
+                        <div class="service-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h3 class="service-title">Especialistas</h3>
+                    <p class="service-description">Accede a más de 20 especialidades médicas.</p>
+                    <div class="service-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estadísticas -->
+    <section class="stats-section">
+        <div class="container mx-auto px-4">
+            <div class="stats-header" data-aos="fade-up">
+                <h2>Resultados que nos respaldan</h2>
+                <p>Brindamos atención médica de alta calidad respaldada por nuestra trayectoria.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Stat 1 -->
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="stat-number" data-count="500000">400</h3>
+                    <p class="stat-label">Afiliados Satisfechos</p>
+                    <div class="stat-decoration"></div>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-hospital-alt"></i>
+                    </div>
+                    <h3 class="stat-number" data-count="300">10</h3>
+                    <p class="stat-label">Centros Médicos</p>
+                    <div class="stat-decoration"></div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3 class="stat-number" data-count="1000">5</h3>
+                    <p class="stat-label">Profesionales de Salud</p>
+                    <div class="stat-decoration"></div>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="stat-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3 class="stat-number">24/7</h3>
+                    <p class="stat-label">Atención de Urgencias</p>
+                    <div class="stat-decoration"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contact-section">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Imagen -->
+                <div class="contact-image-wrapper" data-aos="fade-right">
+                    <div class="contact-image-decoration"></div>
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop"
+                        alt="Mapa de ubicación" class="contact-image" />
+                </div>
+
+                <!-- Tarjeta de contacto -->
+                <div class="contact-card" data-aos="fade-left">
+                    <h3 class="contact-title">Estamos para ayudarte</h3>
+                    <p class="contact-subtitle">Contáctanos para recibir atención personalizada.</p>
+
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Ubicación</h4>
+                                <p>Calle 123 #45-67, Corozal, Sucre</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>304 542 0537</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contacto@mediflex.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-contact">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Enviar Mensaje
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/js_usuarios/index.js"></script>
+    <script src="../js/js_usuarios/include.js"></script>
+
+</body>
+
+</html>
