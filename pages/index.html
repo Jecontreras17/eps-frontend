@@ -21,7 +21,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Custom CSS -->
-    <link href="../css/estilo_usuario/index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/estilo_usuario/index.css">
 
     <!-- Tailwind Config -->
     <script>
@@ -41,137 +41,244 @@
 </head>
 
 <body class="font-sans antialiased">
-    <div id="header"></div>
+    <div class="top-banner">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center gap-4 md:gap-6 flex-wrap text-sm">
+                <span class="flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Calle 123, Barrio Centro, Corozal, Sucre
+                </span>
+                <span class="hidden md:inline">|</span>
+                <span class="flex items-center gap-2">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:300304444">300 304 4444</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between py-4">
+                <!-- Logo -->
+                <a href="/" class="logo-text">
+                    <i class="fas fa-hospital mr-2"></i>
+                    <span>MediFlex</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex items-center gap-8">
+                    <li><a href="./index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="./nosotros.html" class="nav-link">Nosotros</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">
+                            Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Servicios Médicos</div>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-heartbeat"></i>
+                                <span>Urgencias 24/7</span>
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-stethoscope"></i>
+                                <span>Consulta General</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-header">Servicios Adicionales</div>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-pills"></i>
+                                <span>Farmacia</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="#" class="nav-link">Contacto</a></li>
+                </ul>
+
+                <!-- Portal Button -->
+                <button class="hidden lg:flex btn-portal">
+                    <i class="fas fa-user-circle"></i>
+                    Portal Pacientes
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-primary text-2xl p-2" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo-text">
+                <i class="fas fa-hospital mr-2"></i>
+                <span>MediFlex</span>
+            </div>
+            <button class="close-menu" id="closeMenuBtn">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-body">
+            <ul class="mobile-nav">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        Servicios <i class="fas fa-chevron-down ml-1"></i>
+                    </a>
+                    <ul class="mobile-submenu">
+                        <li><a href="#"><i class="fas fa-heartbeat mr-2"></i>Urgencias 24/7</a></li>
+                        <li><a href="#"><i class="fas fa-stethoscope mr-2"></i>Consulta General</a></li>
+                        <li><a href="#"><i class="fas fa-pills mr-2"></i>Farmacia</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <button class="btn-portal  mt-6 justify-center">
+                <i class="fas fa-user-circle"></i>
+                Portal Pacientes
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
     <section class="hero-section">
-        <div class="hero-carousel">
+        <div class="hero-carousel h-full">
             <!-- Slide 1 -->
-            <div class="hero-slide active" data-slide="1">
+            <div class="hero-slide active">
                 <div class="hero-bg hero-bg-1"></div>
                 <div class="hero-overlay"></div>
                 <div class="container mx-auto px-4 h-full">
-                    <div class="flex items-center h-full">
-                        <div class="w-full lg:w-1/2 hero-content">
-                            <span class="hero-badge">
+                    <div class="flex flex-col lg:flex-row items-center justify-between h-full py-12 lg:py-0 gap-8"
+                        style="position: relative; z-index: 10;">
+                        <!-- Contenido Texto -->
+                        <div class="w-full lg:w-1/2 text-center lg:text-left">
+                            <span class="hero-badge mb-4 md:mb-6">
                                 <i class="fas fa-heart-pulse"></i>
-                                Servicio Destacado
+                                <span class="text-xs md:text-sm">Servicio Destacado</span>
                             </span>
-                            <h1 class="hero-title">
+                            <h1 class="hero-title text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6">
                                 Salud para toda<br>
-                                <span>tu familia</span>
+                                <span class="hero-gradient">tu familia</span>
                             </h1>
-                            <p class="hero-subtitle">
-                                Atención médica integral con los mejores especialistas y tecnología de vanguardia. Tu
-                                bienestar es nuestra misión.
+                            <p class="hero-subtitle text-base md:text-lg mb-6 md:mb-8">
+                                Atención médica integral con los mejores especialistas y tecnología de vanguardia.
                             </p>
-                            <div class="hero-buttons">
-                                <button class="btn-hero-primary">Afíliate Ahora</button>
-                                <button class="btn-hero-secondary">Más Información</button>
+                            <div
+                                class="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-8 justify-center lg:justify-start">
+                                <button class="btn-hero-primary px-6 md:px-8 py-3 md:py-4 text-sm md:text-base">
+                                    Afíliate Ahora
+                                </button>
+                                <button class="btn-hero-secondary px-6 md:px-8 py-3 md:py-4 text-sm md:text-base">
+                                    Más Información
+                                </button>
                             </div>
-                            <div class="hero-features">
-                                <div class="hero-feature">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Cobertura Total</span>
+                            <div
+                                class="flex flex-col sm:flex-row gap-4 md:gap-6 items-center justify-center lg:justify-start">
+                                <div class="flex items-center gap-3 text-white">
+                                    <i class="fas fa-check-circle text-xl md:text-2xl"></i>
+                                    <span class="text-sm md:text-base font-semibold">Cobertura Total</span>
                                 </div>
-                                <div class="hero-feature">
-                                    <i class="fas fa-clock"></i>
-                                    <span>Atención 24/7</span>
+                                <div class="flex items-center gap-3 text-white">
+                                    <i class="fas fa-clock text-xl md:text-2xl"></i>
+                                    <span class="text-sm md:text-base font-semibold">Atención 24/7</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="hidden lg:block lg:w-1/2">
-                            <div class="hero-image">
-                                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=600&fit=crop"
-                                    alt="Familia saludable">
-                            </div>
+
+                        <!-- Imagen con efectos -->
+                        <div class="w-full lg:w-1/2 flex items-center justify-center" style="position: relative;">
+                            <!-- Marco decorativo animado 1 -->
+                            <div class="hero-frame-1"></div>
+                            <!-- Marco decorativo animado 2 -->
+                            <div class="hero-frame-2"></div>
+                            <!-- Imagen -->
+                            <img src="../assets/img/salud.jpg" alt="Familia saludable" class="hero-image-enhanced">
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Slide 2 -->
-            <div class="hero-slide" data-slide="2">
+            <div class="hero-slide">
                 <div class="hero-bg hero-bg-2"></div>
                 <div class="hero-overlay"></div>
                 <div class="container mx-auto px-4 h-full">
-                    <div class="flex items-center h-full">
-                        <div class="w-full lg:w-1/2 hero-content">
-                            <span class="hero-badge">
+                    <div class="flex flex-col lg:flex-row items-center justify-between h-full py-12 lg:py-0 gap-8"
+                        style="position: relative; z-index: 10;">
+                        <!-- Contenido Texto -->
+                        <div class="w-full lg:w-1/2 text-center lg:text-left">
+                            <span class="hero-badge mb-4 md:mb-6">
                                 <i class="fas fa-pills"></i>
-                                Nuevo Servicio
+                                <span class="text-xs md:text-sm">Nuevo Servicio</span>
                             </span>
-                            <h1 class="hero-title">
+                            <h1 class="hero-title text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6">
                                 Estado de<br>
-                                <span>Medicamentos</span>
+                                <span class="hero-gradient">Medicamentos</span>
                             </h1>
-                            <p class="hero-subtitle">
-                                Consulta el estado de tus medicamentos de forma rápida y segura. Gestión digital para tu
-                                comodidad.
+                            <p class="hero-subtitle text-base md:text-lg mb-6 md:mb-8">
+                                Consulta el estado de tus medicamentos de forma rápida y segura.
                             </p>
-                            <div class="hero-buttons">
-                                <button class="btn-hero-primary">Consultar Estado</button>
-                                <button class="btn-hero-secondary">Saber Más</button>
-                            </div>
-                            <div class="hero-features">
-                                <div class="hero-feature">
-                                    <i class="fas fa-mobile-alt"></i>
-                                    <span>Consulta Online</span>
-                                </div>
-                                <div class="hero-feature">
-                                    <i class="fas fa-shipping-fast"></i>
-                                    <span>Entrega Rápida</span>
-                                </div>
+                            <div
+                                class="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-8 justify-center lg:justify-start">
+                                <button class="btn-hero-primary px-6 md:px-8 py-3 md:py-4 text-sm md:text-base">
+                                    Consultar Estado
+                                </button>
+                                <button class="btn-hero-secondary px-6 md:px-8 py-3 md:py-4 text-sm md:text-base">
+                                    Saber Más
+                                </button>
                             </div>
                         </div>
-                        <div class="hidden lg:block lg:w-1/2">
-                            <div class="hero-image">
-                                <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=600&h=600&fit=crop"
-                                    alt="Medicamentos">
-                            </div>
+
+                        <!-- Imagen con efectos -->
+                        <div class="w-full lg:w-1/2 flex items-center justify-center" style="position: relative;">
+                            <div class="hero-frame-1"></div>
+                            <div class="hero-frame-2"></div>
+                            <img src="../assets/img/medicamento.jpg" alt="Medicamentos" class="hero-image-enhanced">
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Slide 3 -->
-            <div class="hero-slide" data-slide="3">
+            <div class="hero-slide">
                 <div class="hero-bg hero-bg-3"></div>
                 <div class="hero-overlay"></div>
                 <div class="container mx-auto px-4 h-full">
-                    <div class="flex items-center h-full">
-                        <div class="w-full lg:w-1/2 hero-content">
-                            <span class="hero-badge">
+                    <div class="flex flex-col lg:flex-row items-center justify-between h-full py-12 lg:py-0 gap-8"
+                        style="position: relative; z-index: 10;">
+                        <!-- Contenido Texto -->
+                        <div class="w-full lg:w-1/2 text-center lg:text-left">
+                            <span class="hero-badge mb-4 md:mb-6">
                                 <i class="fas fa-user-circle"></i>
-                                Plataforma Digital
+                                <span class="text-xs md:text-sm">Plataforma Digital</span>
                             </span>
-                            <h1 class="hero-title">
+                            <h1 class="hero-title text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6">
                                 Portal<br>
-                                <span>Pacientes</span>
+                                <span class="hero-gradient">Pacientes</span>
                             </h1>
-                            <p class="hero-subtitle">
-                                Accede a tu historia clínica, agenda citas y gestiona todos tus servicios de salud en un
-                                solo lugar.
+                            <p class="hero-subtitle text-base md:text-lg mb-6 md:mb-8">
+                                Accede a tu historia clínica y gestiona tus servicios de salud.
                             </p>
-                            <div class="hero-buttons">
-                                <button class="btn-hero-primary" onclick="window.location.href='/portal'">Ingresar al
-                                    Portal</button>
-                                <button class="btn-hero-secondary">Registrarse</button>
-                            </div>
-                            <div class="hero-features">
-                                <div class="hero-feature">
-                                    <i class="fas fa-shield-alt"></i>
-                                    <span>100% Seguro</span>
-                                </div>
-                                <div class="hero-feature">
-                                    <i class="fas fa-file-medical"></i>
-                                    <span>Historia Digital</span>
-                                </div>
+                            <div
+                                class="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-8 justify-center lg:justify-start">
+                                <button class="btn-hero-primary px-6 md:px-8 py-3 md:py-4 text-sm md:text-base">
+                                    Ingresar al Portal
+                                </button>
+                                <button class="btn-hero-secondary px-6 md:px-8 py-3 md:py-4 text-sm md:text-base">
+                                    Registrarse
+                                </button>
                             </div>
                         </div>
-                        <div class="hidden lg:block lg:w-1/2">
-                            <div class="hero-image">
-                                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=600&fit=crop"
-                                    alt="Portal Digital">
-                            </div>
+
+                        <!-- Imagen con efectos -->
+                        <div class="w-full lg:w-1/2 flex items-center justify-center" style="position: relative;">
+                            <div class="hero-frame-1"></div>
+                            <div class="hero-frame-2"></div>
+                            <img src="../assets/img/portal.avif" alt="Portal Digital" class="hero-image-enhanced">
                         </div>
                     </div>
                 </div>
@@ -187,9 +294,9 @@
 
             <!-- Indicadores -->
             <div class="carousel-indicators">
-                <button class="indicator active" data-slide="1"></button>
+                <button class="indicator active" data-slide="0"></button>
+                <button class="indicator" data-slide="1"></button>
                 <button class="indicator" data-slide="2"></button>
-                <button class="indicator" data-slide="3"></button>
             </div>
         </div>
     </section>
@@ -200,59 +307,70 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Servicio 1 -->
                 <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+
                     <div class="service-icon-wrapper urgencias">
                         <div class="service-icon">
                             <i class="fas fa-heartbeat"></i>
                         </div>
                     </div>
+
                     <h3 class="service-title">Atención Prioritaria</h3>
-                    <p class="service-description">Servicio de urgencias 24/7 en nuestra red hospitalaria.</p>
-                    <div class="service-arrow">
+                    <p class="service-description">
+                        Servicio de urgencias 24/7 en nuestra red hospitalaria.
+                    </p>
+
+                    <!-- LA BOLITA AHORA ES EL LINK -->
+                    <a href="./atencion_priori.html" class="service-arrow">
                         <i class="fas fa-arrow-right"></i>
-                    </div>
+                    </a>
+
                 </div>
 
-                <!-- Servicio 2 -->
                 <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-icon-wrapper citas">
                         <div class="service-icon">
                             <i class="fas fa-calendar-check"></i>
                         </div>
                     </div>
+
                     <h3 class="service-title">Citas Médicas</h3>
                     <p class="service-description">Agenda tus citas de manera fácil y rápida.</p>
-                    <div class="service-arrow">
+
+                    <a href="./citas.html" class="service-arrow">
                         <i class="fas fa-arrow-right"></i>
-                    </div>
+                    </a>
                 </div>
 
-                <!-- Servicio 3 -->
                 <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-icon-wrapper medicamentos">
                         <div class="service-icon">
                             <i class="fas fa-pills"></i>
                         </div>
                     </div>
+
                     <h3 class="service-title">Medicamentos</h3>
                     <p class="service-description">Amplia red de farmacias para tu comodidad.</p>
-                    <div class="service-arrow">
+
+                    <a href="./medicamento.html" class="service-arrow">
                         <i class="fas fa-arrow-right"></i>
-                    </div>
+                    </a>
                 </div>
 
-                <!-- Servicio 4 -->
                 <div class="service-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-icon-wrapper especialistas">
                         <div class="service-icon">
                             <i class="fas fa-user-md"></i>
                         </div>
                     </div>
+
                     <h3 class="service-title">Especialistas</h3>
                     <p class="service-description">Accede a más de 20 especialidades médicas.</p>
-                    <div class="service-arrow">
+
+                    <a href="./especialistas.html" class="service-arrow">
                         <i class="fas fa-arrow-right"></i>
-                    </div>
+                    </a>
                 </div>
+
             </div>
         </div>
     </section>
@@ -316,8 +434,7 @@
                 <!-- Imagen -->
                 <div class="contact-image-wrapper" data-aos="fade-right">
                     <div class="contact-image-decoration"></div>
-                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop"
-                        alt="Mapa de ubicación" class="contact-image" />
+                    <img src="../assets/img/mapa.jpg" alt="Mapa de ubicación" class="contact-image" />
                 </div>
 
                 <!-- Tarjeta de contacto -->
@@ -371,8 +488,11 @@
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="../js/js_usuarios/index.js"></script>
+
     <script src="../js/js_usuarios/include.js"></script>
+    <script src="../js/js_usuarios/index.js"></script>
+
+
 
 </body>
 

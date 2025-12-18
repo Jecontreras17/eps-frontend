@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialistas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .delay-1 {
+            animation-delay: 0.1s;
+            opacity: 0;
+        }
+
+        .delay-2 {
+            animation-delay: 0.2s;
+            opacity: 0;
+        }
+
+        .delay-3 {
+            animation-delay: 0.3s;
+            opacity: 0;
+        }
+
+        .delay-4 {
+            animation-delay: 0.4s;
+            opacity: 0;
+        }
+
+        .specialty-card {
+            transition: all 0.3s ease;
+        }
+
+        .specialty-card:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-teal-50 via-white to-cyan-50">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <nav class="flex items-center gap-3 text-base md:text-lg font-medium text-gray-600">
+                    <a href="./index.html" class="hover:text-teal-700 transition-colors flex items-center gap-1">
+                        <i class="fas fa-home text-sm"></i>
+                        Inicio
+                    </a>
+                    <span class="text-gray-400">/</span>
+                    <span class="text-gray-900 font-semibold">
+                        Especialistas
+                    </span>
+                </nav>
+
+                <div class="flex items-center gap-3">
+                    <div
+                        class="bg-gradient-to-br from-teal-600 to-cyan-500 w-14 h-14 rounded-2xl flex items-center justify-center shadow-md">
+                        <i class="fas fa-user-md text-white text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION CON DISEÑO DIAGONAL -->
+    <section class="relative overflow-hidden min-h-[600px] flex items-center">
+        <!-- Fondo con diseño diagonal -->
+        <div class="absolute inset-0">
+            <div
+                class="absolute inset-0 bg-gradient-to-br from-teal-600 via-cyan-600 to-blue-700 transform -skew-y-6 origin-top-left">
+            </div>
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-cyan-400/30 to-transparent"></div>
+            <div
+                class="absolute bottom-0 left-0 w-96 h-96 bg-teal-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float">
+            </div>
+            <div class="absolute top-20 right-20 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float"
+                style="animation-delay: 1s;"></div>
+        </div>
+
+        <div class="container mx-auto px-6 py-24 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Lado izquierdo - Texto -->
+                <div class="text-white slide-in-left">
+                    <div
+                        class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8">
+                        <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        <span class="text-sm font-semibold">Más de 50 especialidades médicas</span>
+                    </div>
+                    <h1 class="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+                        Nuestros<br />
+                        <span class="text-cyan-300">Especialistas</span>
+                    </h1>
+                    <p class="text-xl text-teal-100 mb-8 leading-relaxed max-w-lg">
+                        Contamos con un equipo médico altamente calificado y especializado para brindarte la mejor
+                        atención en todas las áreas de la medicina.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#especialidades"
+                            class="bg-white text-teal-600 font-bold px-8 py-4 rounded-full hover:bg-teal-50 transition-all shadow-xl hover:shadow-2xl">
+                            <i class="fas fa-stethoscope mr-2"></i>
+                            Ver Especialidades
+                        </a>
+                        <a href="#agendar"
+                            class="border-2 border-white text-white font-bold px-8 py-4 rounded-full hover:bg-white hover:text-teal-600 transition-all">
+                            <i class="fas fa-calendar-check mr-2"></i>
+                            Agendar Cita
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Lado derecho - Stats Cards -->
+                <div class="slide-in-right space-y-6">
+                    <div class="bg-white rounded-3xl p-8 shadow-2xl transform hover:scale-105 transition-all">
+                        <div class="flex items-center justify-between mb-6">
+                            <div>
+                                <div class="text-5xl font-bold text-teal-600 mb-2">120+</div>
+                                <div class="text-gray-600 font-semibold">Médicos Especialistas</div>
+                            </div>
+                            <div class="bg-teal-100 w-20 h-20 rounded-2xl flex items-center justify-center">
+                                <i class="fas fa-users text-teal-600 text-3xl"></i>
+                            </div>
+                        </div>
+                        <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-teal-500 to-cyan-500 w-[95%]"></div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl p-6 shadow-xl text-white">
+                            <div class="text-4xl font-bold mb-2">50+</div>
+                            <div class="text-cyan-100 text-sm font-semibold">Especialidades</div>
+                            <i class="fas fa-award text-cyan-200 text-3xl mt-4 opacity-50"></i>
+                        </div>
+                        <div class="bg-gradient-to-br from-teal-500 to-cyan-600 rounded-3xl p-6 shadow-xl text-white">
+                            <div class="text-4xl font-bold mb-2">24/7</div>
+                            <div class="text-teal-100 text-sm font-semibold">Disponibilidad</div>
+                            <i class="fas fa-clock text-teal-200 text-3xl mt-4 opacity-50"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESPECIALIDADES MÉDICAS -->
+    <section id="especialidades" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="text-teal-600 font-semibold text-sm uppercase tracking-wide">Áreas de
+                    Especialización</span>
+                <h2 class="text-5xl font-bold text-gray-800 mt-2 mb-4">
+                    Especialidades Médicas
+                </h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+                    Ofrecemos atención especializada en múltiples áreas de la medicina con los mejores profesionales del
+                    país.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="specialty-card bg-gradient-to-br from-red-50 to-red-100 rounded-3xl p-6 shadow-lg hover:shadow-2xl">
+                    <div class="bg-red-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-lg">
+                        <i class="fas fa-heart text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Cardiología</h3>
+                    <p class="text-gray-600 text-sm mb-4">Cuidado integral del corazón y sistema cardiovascular.</p>
+                    <div class="flex items-center text-red-600 font-semibold text-sm">
+                        <span>15 especialistas</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="specialty-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-6 shadow-lg hover:shadow-2xl">
+                    <div class="bg-blue-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-lg">
+                        <i class="fas fa-brain text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Neurología</h3>
+                    <p class="text-gray-600 text-sm mb-4">Diagnóstico y tratamiento del sistema nervioso.</p>
+                    <div class="flex items-center text-blue-600 font-semibold text-sm">
+                        <span>12 especialistas</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="specialty-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-6 shadow-lg hover:shadow-2xl">
+                    <div class="bg-purple-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-lg">
+                        <i class="fas fa-baby text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Pediatría</h3>
+                    <p class="text-gray-600 text-sm mb-4">Atención médica especializada para niños.</p>
+                    <div class="flex items-center text-purple-600 font-semibold text-sm">
+                        <span>18 especialistas</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="specialty-card bg-gradient-to-br from-pink-50 to-pink-100 rounded-3xl p-6 shadow-lg hover:shadow-2xl">
+                    <div class="bg-pink-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-lg">
+                        <i class="fas fa-user-nurse text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Ginecología</h3>
+                    <p class="text-gray-600 text-sm mb-4">Salud integral de la mujer en todas las etapas.</p>
+                    <div class="flex items-center text-pink-600 font-semibold text-sm">
+                        <span>14 especialistas</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div
+                    class="specialty-card bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-6 shadow-lg hover:shadow-2xl">
+                    <div class="bg-green-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-lg">
+                        <i class="fas fa-bone text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Traumatología</h3>
+                    <p class="text-gray-600 text-sm mb-4">Tratamiento de lesiones del sistema músculo-esquelético.</p>
+                    <div class="flex items-center text-green-600 font-semibold text-sm">
+                        <span>10 especialistas</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div
+                    class="specialty-card bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl p-6 shadow-lg hover:shadow-2xl">
+                    <div class="bg-orange-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-lg">
+                        <i class="fas fa-eye text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Oftalmología</h3>
+                    <p class="text-gray-600 text-sm mb-4">Cuidado especializado de la salud visual.</p>
+                    <div class="flex items-center text-orange-600 font-semibold text-sm">
+                        <span>8 especialistas</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div
+                    class="specialty-card bg-gradient-to-br from-teal-50 to-teal-100 rounded-3xl p-6 shadow-lg hover:shadow-2xl">
+                    <div class="bg-teal-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-lg">
+                        <i class="fas fa-lungs text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Neumología</h3>
+                    <p class="text-gray-600 text-sm mb-4">Especialistas en enfermedades respiratorias.</p>
+                    <div class="flex items-center text-teal-600 font-semibold text-sm">
+                        <span>9 especialistas</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div
+                    class="specialty-card bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-3xl p-6 shadow-lg hover:shadow-2xl">
+                    <div class="bg-indigo-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-lg">
+                        <i class="fas fa-procedures text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Cirugía General</h3>
+                    <p class="text-gray-600 text-sm mb-4">Procedimientos quirúrgicos de alta complejidad.</p>
+                    <div class="flex items-center text-indigo-600 font-semibold text-sm">
+                        <span>16 especialistas</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón Ver Más -->
+            <div class="text-center mt-12">
+                <button
+                    class="bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-bold px-10 py-4 rounded-full hover:shadow-2xl transition-all transform hover:scale-105">
+                    <i class="fas fa-plus-circle mr-2"></i>
+                    Ver Todas las Especialidades
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS ESPECIALIZADOS -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-cyan-600 font-semibold text-sm uppercase tracking-wide">Servicios Premium</span>
+                <h2 class="text-5xl font-bold text-gray-800 mt-2 mb-4">
+                    Lo Que Ofrecemos
+                </h2>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="bg-teal-100 w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-calendar-alt text-teal-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Consultas Programadas</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        Agenda tu cita con el especialista de tu preferencia de forma rápida y sencilla. Sistema de
+                        recordatorios incluido.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="bg-cyan-100 w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-video text-cyan-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Telemedicina</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        Consultas virtuales con nuestros especialistas desde la comodidad de tu hogar con la misma
+                        calidad de atención.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="bg-blue-100 w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-clipboard-list text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Segunda Opinión</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        Servicio de segunda opinión médica con nuestros especialistas certificados para casos complejos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AGENDAR CITA -->
+    <section id="agendar"
+        class="py-20 bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div
+                class="absolute w-96 h-96 bg-cyan-400 rounded-full mix-blend-overlay filter blur-3xl opacity-30 top-10 left-10 animate-pulse">
+            </div>
+            <div class="absolute w-96 h-96 bg-blue-400 rounded-full mix-blend-overlay filter blur-3xl opacity-30 bottom-10 right-10 animate-pulse"
+                style="animation-delay: 1s;"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <div
+                        class="inline-block bg-white w-24 h-24 rounded-full flex items-center justify-center mb-8 shadow-2xl">
+                        <i class="fas fa-calendar-check text-teal-600 text-4xl"></i>
+                    </div>
+                    <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                        Agenda Tu Consulta
+                    </h2>
+                    <p class="text-2xl text-cyan-100 max-w-3xl mx-auto">
+                        Contacta con nuestro equipo para agendar tu cita con el especialista que necesitas
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 hover:bg-white/20 transition-all">
+                        <i class="fas fa-phone-alt text-5xl mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-3">Llámanos</h3>
+                        <a href="tel:1234567890" class="text-4xl font-bold hover:text-cyan-300 transition-colors">
+                            123-456-7890
+                        </a>
+                        <p class="text-cyan-100 mt-4">Lunes a Viernes: 7:00 AM - 8:00 PM</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 hover:bg-white/20 transition-all">
+                        <i class="fas fa-envelope text-5xl mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-3">Escríbenos</h3>
+                        <a href="mailto:citas@hospital.com"
+                            class="text-2xl font-bold hover:text-cyan-300 transition-colors break-all">
+                            citas@hospital.com
+                        </a>
+                        <p class="text-cyan-100 mt-4">Respuesta en menos de 24 horas</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 text-gray-800">
+                    <h3 class="text-2xl font-bold mb-6 text-center">¿Qué necesitas para agendar?</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div
+                                class="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-id-card text-teal-600 text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">Identificación</h4>
+                            <p class="text-sm text-gray-600">Documento de identidad válido</p>
+                        </div>
+                        <div class="text-center">
+                            <div
+                                class="bg-cyan-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-file-medical text-cyan-600 text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">Orden Médica</h4>
+                            <p class="text-sm text-gray-600">Si la tienes de tu médico de cabecera</p>
+                        </div>
+                        <div class="text-center">
+                            <div
+                                class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">Seguro Médico</h4>
+                            <p class="text-sm text-gray-600">Información de tu aseguradora</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div
+                            class="bg-gradient-to-br from-teal-500 to-cyan-600 w-10 h-10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-heartbeat text-white"></i>
+                        </div>
+                        <span class="font-bold text-white text-lg">Hospital Central</span>
+                    </div>
+                    <p class="text-sm text-gray-400">
+                        Comprometidos con tu salud y bienestar, brindando atención médica de calidad.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Servicios</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Urgencias</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Consulta Externa</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Hospitalización</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Cirugía</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Enlaces</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Sobre Nosotros</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Especialidades</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Noticias</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Síguenos</h4>
+                    <div class="flex gap-3">
+                        <a href="#"
+                            class="bg-gray-800 w-10 h-10 rounded-lg flex items-center justify-center hover:bg-teal-600 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="bg-gray-800 w-10 h-10 rounded-lg flex items-center justify-center hover:bg-teal-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="bg-gray-800 w-10 h-10 rounded-lg flex items-center justify-center hover:bg-teal-600 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2025 Hospital Central. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

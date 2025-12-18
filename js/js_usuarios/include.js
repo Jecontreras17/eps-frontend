@@ -1,17 +1,15 @@
-function loadPartial(id, file) {
+console.log("include.js cargado");
+
+function loadPartial(id, file, callback) {
     fetch(file)
-        .then(response => {
-            if (!response.ok) throw new Error("No se pudo cargar " + file);
-            return response.text();
+        .then(res => {
+            if (!res.ok) throw new Error("Error cargando " + file);
+            return res.text();
         })
         .then(html => {
             document.getElementById(id).innerHTML = html;
+            if (callback) callback();
         })
-        .catch(error => {
-            console.error(error);
-        });
+        .catch(err => console.error(err));
 }
-
-// Cargar header y footer
-loadPartial("header", "../partials/header.html");
 loadPartial("footer", "../partials/footer.html");

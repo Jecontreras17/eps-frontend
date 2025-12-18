@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citas Médicas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.1s;
+            opacity: 0;
+        }
+
+        .delay-2 {
+            animation-delay: 0.2s;
+            opacity: 0;
+        }
+
+        .delay-3 {
+            animation-delay: 0.3s;
+            opacity: 0;
+        }
+
+        .delay-4 {
+            animation-delay: 0.4s;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-green-50 via-white to-teal-50">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4">
+
+            <div class="flex items-center justify-between">
+
+                <!-- Navegación izquierda -->
+                <nav class="flex items-center gap-3 text-base md:text-lg font-medium text-gray-600">
+                    <a href="./index.html" class="hover:text-green-700 transition-colors flex items-center gap-1">
+                        <i class="fas fa-home text-sm"></i>
+                        Inicio
+                    </a>
+
+                    <span class="text-gray-400">/</span>
+
+                    <span class="text-gray-900 font-semibold">
+                        Citas Médicas
+                    </span>
+                </nav>
+
+                <!-- Logo derecha -->
+                <div class="flex items-center gap-3">
+                    <div
+                        class="bg-gradient-to-br from-green-600 to-teal-500 w-14 h-14 rounded-2xl flex items-center justify-center shadow-md">
+                        <i class="fas fa-calendar-check text-white text-2xl"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-gradient-to-r from-green-600 via-teal-600 to-cyan-600 text-white py-20 overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center fade-in-up">
+                <div class="inline-block bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
+                    <span class="text-sm font-semibold">📅 Agenda tu consulta ahora</span>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    Citas Médicas
+                </h1>
+                <p class="text-xl md:text-2xl text-teal-100 mb-8">
+                    Reserva tu cita de manera rápida y sencilla con nuestros especialistas.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="#metodos"
+                        class="bg-white text-green-600 font-bold px-8 py-4 rounded-full hover:bg-green-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <i class="fas fa-calendar-plus mr-2"></i>
+                        Agendar Ahora
+                    </a>
+                    <a href="#contacto"
+                        class="bg-teal-500 text-white font-bold px-8 py-4 rounded-full hover:bg-teal-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <i class="fas fa-phone mr-2"></i>
+                        Llamar
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
+                    fill="white" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- MÉTODOS DE AGENDAMIENTO -->
+    <section id="metodos" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="text-green-600 font-semibold text-sm uppercase tracking-wide">Métodos de
+                    Agendamiento</span>
+                <h2 class="text-4xl font-bold text-gray-800 mt-2 mb-4">
+                    ¿Cómo Agendar tu Cita?
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Ofrecemos múltiples opciones para que puedas reservar tu cita médica de la manera más cómoda para
+                    ti.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-2 fade-in-up delay-1">
+                    <div class="bg-blue-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fas fa-globe text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Portal Web</h3>
+                    <p class="text-gray-600">
+                        Accede a nuestro portal en línea disponible las 24 horas del día.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-2 fade-in-up delay-2">
+                    <div class="bg-green-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fas fa-mobile-alt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">App Móvil</h3>
+                    <p class="text-gray-600">
+                        Descarga nuestra aplicación para iOS y Android y agenda desde tu celular.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-2 fade-in-up delay-3">
+                    <div class="bg-purple-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fas fa-phone text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Vía Telefónica</h3>
+                    <p class="text-gray-600">
+                        Llámanos y nuestro equipo te ayudará a agendar tu cita de inmediato.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-2 fade-in-up delay-4">
+                    <div class="bg-orange-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fas fa-hospital-user text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Presencial</h3>
+                    <p class="text-gray-600">
+                        Visita nuestras oficinas de atención al paciente en el hospital.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESPECIALIDADES MÉDICAS -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-teal-600 font-semibold text-sm uppercase tracking-wide">Especialidades Médicas</span>
+                <h2 class="text-4xl font-bold text-gray-800 mt-2 mb-4">
+                    Elige tu Especialidad
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Contamos con profesionales altamente capacitados en diversas áreas de la medicina.
+                </p>
+            </div>
+
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+                <div
+                    class="bg-gradient-to-r from-red-500 to-red-600 rounded-2xl p-8 text-white shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <div
+                                class="inline-block bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-4 py-1 mb-3">
+                                <span class="text-sm font-bold">ÁREA CARDIOVASCULAR</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Cardiología</h3>
+                            <p class="text-red-100 mb-4">Especialistas en salud del corazón</p>
+                        </div>
+                        <i class="fas fa-heart-pulse text-5xl opacity-30"></i>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-xl p-4">
+                        <p class="text-sm">Consultas preventivas, electrocardiogramas, seguimiento</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-8 text-white shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <div
+                                class="inline-block bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-4 py-1 mb-3">
+                                <span class="text-sm font-bold">ÁREA NEUROLÓGICA</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Neurología</h3>
+                            <p class="text-blue-100 mb-4">Expertos en sistema nervioso</p>
+                        </div>
+                        <i class="fas fa-brain text-5xl opacity-30"></i>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-xl p-4">
+                        <p class="text-sm">Diagnóstico y tratamiento de trastornos neurológicos</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl p-8 text-white shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <div
+                                class="inline-block bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-4 py-1 mb-3">
+                                <span class="text-sm font-bold">ÁREA PEDIÁTRICA</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Pediatría</h3>
+                            <p class="text-purple-100 mb-4">Cuidado integral para niños</p>
+                        </div>
+                        <i class="fas fa-baby text-5xl opacity-30"></i>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-xl p-4">
+                        <p class="text-sm">Controles de crecimiento, vacunación, consultas generales</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gradient-to-r from-pink-500 to-pink-600 rounded-2xl p-8 text-white shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <div
+                                class="inline-block bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-4 py-1 mb-3">
+                                <span class="text-sm font-bold">ÁREA GINECOLÓGICA</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Ginecología</h3>
+                            <p class="text-pink-100 mb-4">Atención integral femenina</p>
+                        </div>
+                        <i class="fas fa-venus text-5xl opacity-30"></i>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-xl p-4">
+                        <p class="text-sm">Control prenatal, planificación familiar, exámenes</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-8 text-white shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <div
+                                class="inline-block bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-4 py-1 mb-3">
+                                <span class="text-sm font-bold">ÁREA TRAUMATOLÓGICA</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Traumatología</h3>
+                            <p class="text-orange-100 mb-4">Especialistas en huesos y articulaciones</p>
+                        </div>
+                        <i class="fas fa-bone text-5xl opacity-30"></i>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-xl p-4">
+                        <p class="text-sm">Fracturas, lesiones deportivas, dolor articular</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-8 text-white shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <div
+                                class="inline-block bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-4 py-1 mb-3">
+                                <span class="text-sm font-bold">ÁREA GENERAL</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Medicina General</h3>
+                            <p class="text-green-100 mb-4">Atención primaria de salud</p>
+                        </div>
+                        <i class="fas fa-user-doctor text-5xl opacity-30"></i>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-xl p-4">
+                        <p class="text-sm">Consultas generales, diagnóstico y prevención</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO Y HORARIOS -->
+    <section id="contacto"
+        class="py-20 bg-gradient-to-r from-green-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div
+                    class="inline-block bg-white w-24 h-24 rounded-full flex items-center justify-center mb-8 shadow-2xl">
+                    <i class="fas fa-calendar-check text-green-600 text-4xl animate-pulse"></i>
+                </div>
+                <h2 class="text-5xl font-bold mb-6">
+                    ¿Necesitas Ayuda para Agendar?
+                </h2>
+                <p class="text-2xl text-teal-100 mb-8">
+                    Nuestro equipo de atención está disponible para asistirte
+                </p>
+                <div class="bg-white bg-opacity-20 backdrop-blur-md rounded-3xl p-10 mb-8">
+                    <p class="text-teal-100 text-lg mb-4">Llámanos al</p>
+                    <a href="tel:1234567890"
+                        class="text-6xl md:text-7xl font-bold hover:text-yellow-300 transition-colors">
+                        123-456-7890
+                    </a>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 text-center">
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6">
+                        <i class="fas fa-map-marker-alt text-4xl mb-3"></i>
+                        <h4 class="font-bold mb-2">Ubicación</h4>
+                        <p class="text-teal-100 text-sm">Av. Principal #123, Centro Médico</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6">
+                        <i class="fas fa-envelope text-4xl mb-3"></i>
+                        <h4 class="font-bold mb-2">Email</h4>
+                        <p class="text-teal-100 text-sm">citas@hospital.com</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6">
+                        <i class="fas fa-clock text-4xl mb-3"></i>
+                        <h4 class="font-bold mb-2">Horario</h4>
+                        <p class="text-teal-100 text-sm">Lun - Vie: 7:00 AM - 7:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div
+                            class="bg-gradient-to-br from-green-500 to-teal-600 w-10 h-10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-heartbeat text-white"></i>
+                        </div>
+                        <span class="font-bold text-white text-lg">Hospital Central</span>
+                    </div>
+                    <p class="text-sm text-gray-400">
+                        Comprometidos con tu salud y bienestar, brindando atención médica de calidad.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Servicios</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Urgencias</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Consulta Externa</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Hospitalización</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Cirugía</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Enlaces</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Sobre Nosotros</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Especialidades</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Noticias</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Síguenos</h4>
+                    <div class="flex gap-3">
+                        <a href="#"
+                            class="bg-gray-800 w-10 h-10 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="bg-gray-800 w-10 h-10 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="bg-gray-800 w-10 h-10 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2025 Hospital Central. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
