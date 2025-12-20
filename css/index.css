@@ -982,29 +982,6 @@ body.menu-open {
            }
        }
 
-       .fade-in-up {
-           animation: fadeInUp 0.6s ease-out forwards;
-       }
-
-       .delay-1 {
-           animation-delay: 0.1s;
-           opacity: 0;
-       }
-
-       .delay-2 {
-           animation-delay: 0.2s;
-           opacity: 0;
-       }
-
-       .delay-3 {
-           animation-delay: 0.3s;
-           opacity: 0;
-       }
-
-       .delay-4 {
-           animation-delay: 0.4s;
-           opacity: 0;
-       }
 
 
 /* Medicamentos */
@@ -1045,9 +1022,7 @@ body.menu-open {
     }
 }
 
-.fade-in-up {
-    animation: fadeInUp 0.6s ease-out forwards;
-}
+
 
 .slide-in-left {
     animation: slideInLeft 0.8s ease-out forwards;
@@ -1057,25 +1032,7 @@ body.menu-open {
     animation: slideInRight 0.8s ease-out forwards;
 }
 
-.delay-1 {
-    animation-delay: 0.1s;
-    opacity: 0;
-}
 
-.delay-2 {
-    animation-delay: 0.2s;
-    opacity: 0;
-}
-
-.delay-3 {
-    animation-delay: 0.3s;
-    opacity: 0;
-}
-
-.delay-4 {
-    animation-delay: 0.4s;
-    opacity: 0;
-}
 
 /* Especialista */
 
@@ -1127,41 +1084,12 @@ body.menu-open {
        }
    }
 
-   .fade-in-up {
-       animation: fadeInUp 0.6s ease-out forwards;
-   }
 
-   .slide-in-left {
-       animation: slideInLeft 0.8s ease-out forwards;
-   }
-
-   .slide-in-right {
-       animation: slideInRight 0.8s ease-out forwards;
-   }
 
    .float {
        animation: float 3s ease-in-out infinite;
    }
 
-   .delay-1 {
-       animation-delay: 0.1s;
-       opacity: 0;
-   }
-
-   .delay-2 {
-       animation-delay: 0.2s;
-       opacity: 0;
-   }
-
-   .delay-3 {
-       animation-delay: 0.3s;
-       opacity: 0;
-   }
-
-   .delay-4 {
-       animation-delay: 0.4s;
-       opacity: 0;
-   }
 
    .specialty-card {
        transition: all 0.3s ease;
@@ -1403,9 +1331,6 @@ body.menu-open {
 
    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-   * {
-       font-family: 'Inter', sans-serif;
-   }
 
 
    .card-float {
@@ -1449,9 +1374,6 @@ body.menu-open {
        }
    }
 
-   .fade-in {
-       animation: fadeIn 0.8s ease-out;
-   }
 
    @keyframes fadeIn {
        from {
@@ -1513,12 +1435,6 @@ body.menu-open {
 
     /* farmacia */
 
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
-    * {
-        font-family: 'Inter', sans-serif;
-    }
-
     /* HERO SECTION - FARMACIA */
     section.hero-farmacia {
         --primary: #10b981;
@@ -1572,9 +1488,6 @@ body.menu-open {
         box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
     }
 
-    .pulse-dot {
-        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    }
 
     @keyframes pulse {
 
@@ -1617,18 +1530,6 @@ body.menu-open {
             opacity: 1;
         }
     }
-
-        .scroll-fade {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease-out;
-        }
-
-        .scroll-fade.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
         .category-badge {
             transition: all 0.3s ease;
         }
@@ -1642,9 +1543,6 @@ body.menu-open {
 
            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-        * {
-            font-family: 'Inter', sans-serif;
-        }
 
         .medical-pattern {
             background-image:
