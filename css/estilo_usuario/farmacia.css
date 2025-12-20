@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+/* HERO SECTION - FARMACIA */
+section.hero-farmacia {
+    --primary: #10b981;
+    --primary-dark: #059669;
+    --secondary: #34d399;
+    --accent: #6ee7b7;
+    background: linear-gradient(180deg, #f0fdf4 0%, #d1fae5 50%, #f0fdf4 100%) !important;
+}
+
+section.hero-farmacia a[href^="tel"] {
+    background-color: #10b981 !important;
+    background: #10b981 !important;
+    color: #ffffff !important;
+}
+
+section.hero-farmacia a[href^="tel"]:hover {
+    background-color: #059669 !important;
+}
+
+section.hero-farmacia button {
+    background-color: #ffffff !important;
+    color: #10b981 !important;
+    border: 2px solid #d1fae5 !important;
+}
+
+section.hero-farmacia h1 {
+    color: #111827 !important;
+}
+
+section.hero-farmacia p {
+    color: #4b5563 !important;
+}
+
+section.hero-farmacia .text-4xl {
+    color: #10b981 !important;
+}
+
+section.hero-farmacia h1 span {
+    background: linear-gradient(to right, #10b981, #34d399, #10b981) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
+}
+
+.pulse-dot {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.slide-up {
+    animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.scroll-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.category-badge {
+    transition: all 0.3s ease;
+}
+
+.category-badge:hover {
+    transform: scale(1.05);
+}

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmacia - MediFlex EPS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilo_usuario/index.css">
+    <link rel="stylesheet" href="../css/estilo_usuario/farmacia.css">
+</head>
+
+<body class="bg-gray-50">
+    <div class="top-banner">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center gap-4 md:gap-6 flex-wrap text-sm">
+                <span class="flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Calle 123, Barrio Centro, Corozal, Sucre
+                </span>
+                <span class="hidden md:inline">|</span>
+                <span class="flex items-center gap-2">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:300304444">300 304 4444</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between py-4">
+                <!-- Logo -->
+                <a href="/" class="logo-text">
+                    <i class="fas fa-hospital mr-2"></i>
+                    <span>MediFlex</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex items-center gap-8">
+                    <li><a href="./index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="./nosotros.html" class="nav-link">Nosotros</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">
+                            Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Servicios Médicos</div>
+                            <a href="./urgencia.html" class="dropdown-item">
+                                <i class="fas fa-heartbeat"></i>
+                                <span>Urgencias 24/7</span>
+                            </a>
+                            <a href="./consulta.html" class="dropdown-item">
+                                <i class="fas fa-stethoscope"></i>
+                                <span>Consulta General</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-header">Servicios Adicionales</div>
+                            <a href="./farmacia.html" class="dropdown-item">
+                                <i class="fas fa-pills"></i>
+                                <span>Farmacia</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="./contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+
+                <!-- Portal Button -->
+                <button class="hidden lg:flex btn-portal">
+                    <i class="fas fa-user-circle"></i>
+                    Portal Pacientes
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-primary text-2xl p-2" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo-text">
+                <i class="fas fa-hospital mr-2"></i>
+                <span>MediFlex</span>
+            </div>
+            <button class="close-menu" id="closeMenuBtn">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-body">
+            <ul class="mobile-nav">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        Servicios <i class="fas fa-chevron-down ml-1"></i>
+                    </a>
+                    <ul class="mobile-submenu">
+                        <li><a href="./urgencia.html"><i class="fas fa-heartbeat mr-2"></i>Urgencias 24/7</a></li>
+                        <li><a href="./consulta.html"><i class="fas fa-stethoscope mr-2"></i>Consulta General</a></li>
+                        <li><a href="./farmacia.html"><i class="fas fa-pills mr-2"></i>Farmacia</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+            <button class="btn-portal  mt-6 justify-center">
+                <i class="fas fa-user-circle"></i>
+                Portal Pacientes
+            </button>
+        </div>
+    </div>
+    <!-- Hero Section -->
+    <section class="hero-farmacia min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
+        <!-- Decorative blobs -->
+        <div
+            class="absolute top-20 right-10 w-72 h-72 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse">
+        </div>
+        <div class="absolute bottom-20 left-10 w-72 h-72 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"
+            style="animation-delay: 1s;"></div>
+
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 bg-white px-5 py-2 rounded-full shadow-md mb-8 fade-in">
+                <span class="w-2 h-2 bg-green-500 rounded-full pulse-dot"></span>
+                <span class="text-sm font-semibold text-gray-700">Farmacia abierta 24/7</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-6 leading-tight fade-in">
+                Tu Farmacia,<br>
+                <span
+                    class="bg-gradient-to-r from-green-600 via-emerald-600 to-green-600 bg-clip-text text-transparent">
+                    Siempre Contigo
+                </span>
+            </h1>
+
+            <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed fade-in">
+                Medicamentos de calidad, atención farmacéutica profesional y la mejor asesoría para tu tratamiento.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16 slide-up">
+                <a href="tel:300304444"
+                    class="group bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
+                    <i class="fas fa-phone"></i>
+                    Llamar: 300 304 4444
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <button
+                    class="bg-white hover:bg-gray-50 text-green-600 px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 border-2 border-green-200">
+                    <i class="fas fa-prescription-bottle"></i>
+                    Ver Catálogo
+                </button>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto slide-up">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-green-600 mb-2">5000+</div>
+                    <div class="text-sm text-gray-600 font-medium">Medicamentos</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-green-600 mb-2">24/7</div>
+                    <div class="text-sm text-gray-600 font-medium">Disponible</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-green-600 mb-2">100%</div>
+                    <div class="text-sm text-gray-600 font-medium">Certificados</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-green-600 mb-2">99%</div>
+                    <div class="text-sm text-gray-600 font-medium">Satisfacción</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorías de Productos -->
+    <section class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 scroll-fade">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Categorías de Productos</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Encuentra todo lo que necesitas para tu salud y bienestar
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Categoría 1 -->
+                <div
+                    class="category-badge bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 text-center cursor-pointer border-2 border-blue-200 hover:border-blue-400 card-hover scroll-fade">
+                    <div
+                        class="w-20 h-20 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-pills text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Medicamentos</h3>
+                    <p class="text-gray-600 text-sm">Con y sin fórmula médica</p>
+                </div>
+
+                <!-- Categoría 2 -->
+                <div class="category-badge bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 text-center cursor-pointer border-2 border-green-200 hover:border-green-400 card-hover scroll-fade"
+                    style="animation-delay: 0.1s;">
+                    <div
+                        class="w-20 h-20 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-leaf text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Naturales</h3>
+                    <p class="text-gray-600 text-sm">Productos herbales y vitaminas</p>
+                </div>
+
+                <!-- Categoría 3 -->
+                <div class="category-badge bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6 text-center cursor-pointer border-2 border-purple-200 hover:border-purple-400 card-hover scroll-fade"
+                    style="animation-delay: 0.2s;">
+                    <div
+                        class="w-20 h-20 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-baby text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Bebés y Niños</h3>
+                    <p class="text-gray-600 text-sm">Productos pediátricos</p>
+                </div>
+
+                <!-- Categoría 4 -->
+                <div class="category-badge bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl p-6 text-center cursor-pointer border-2 border-pink-200 hover:border-pink-400 card-hover scroll-fade"
+                    style="animation-delay: 0.3s;">
+                    <div
+                        class="w-20 h-20 bg-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-heart text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Cuidado Personal</h3>
+                    <p class="text-gray-600 text-sm">Higiene y belleza</p>
+                </div>
+
+                <!-- Categoría 5 -->
+                <div class="category-badge bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 text-center cursor-pointer border-2 border-orange-200 hover:border-orange-400 card-hover scroll-fade"
+                    style="animation-delay: 0.4s;">
+                    <div
+                        class="w-20 h-20 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-dumbbell text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Deportivos</h3>
+                    <p class="text-gray-600 text-sm">Suplementos y nutrición</p>
+                </div>
+
+                <!-- Categoría 6 -->
+                <div class="category-badge bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-6 text-center cursor-pointer border-2 border-red-200 hover:border-red-400 card-hover scroll-fade"
+                    style="animation-delay: 0.5s;">
+                    <div
+                        class="w-20 h-20 bg-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-thermometer text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Equipos Médicos</h3>
+                    <p class="text-gray-600 text-sm">Tensiómetros, glucómetros</p>
+                </div>
+
+                <!-- Categoría 7 -->
+                <div class="category-badge bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl p-6 text-center cursor-pointer border-2 border-indigo-200 hover:border-indigo-400 card-hover scroll-fade"
+                    style="animation-delay: 0.6s;">
+                    <div
+                        class="w-20 h-20 bg-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-user-md text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Ortopedia</h3>
+                    <p class="text-gray-600 text-sm">Aparatos ortopédicos</p>
+                </div>
+
+                <!-- Categoría 8 -->
+                <div class="category-badge bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 text-center cursor-pointer border-2 border-teal-200 hover:border-teal-400 card-hover scroll-fade"
+                    style="animation-delay: 0.7s;">
+                    <div
+                        class="w-20 h-20 bg-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-first-aid text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Primeros Auxilios</h3>
+                    <p class="text-gray-600 text-sm">Botiquines y vendajes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Farmacéuticos -->
+    <section class="py-24 px-4 bg-gradient-to-br from-green-50 to-emerald-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 scroll-fade">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Servicios Farmacéuticos</h2>
+                <p class="text-xl text-gray-600">Más que una farmacia, tu aliado en salud</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover scroll-fade">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-user-nurse text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Asesoría Farmacéutica</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Profesionales certificados te orientan sobre el uso correcto de medicamentos.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check-circle text-green-600"></i>
+                            <span>Consulta personalizada</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check-circle text-green-600"></i>
+                            <span>Revisión de medicación</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check-circle text-green-600"></i>
+                            <span>Seguimiento terapéutico</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover scroll-fade" style="animation-delay: 0.1s;">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-truck text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Domicilios</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Llevamos tus medicamentos directamente a tu hogar de forma rápida y segura.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check-circle text-blue-600"></i>
+                            <span>Entrega en 2 horas</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check-circle text-blue-600"></i>
+                            <span>Envío gratuito +$50.000</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check-circle text-blue-600"></i>
+                            <span>Seguimiento en tiempo real</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover scroll-fade" style="animation-delay: 0.2s;">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Pedidos en Línea</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Ordena tus medicamentos desde la comodidad de tu hogar a través de nuestra app.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check-circle text-purple-600"></i>
+                            <span>Historial de compras</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check-circle text-purple-600"></i>
+                            <span>Recordatorios de toma</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check-circle text-purple-600"></i>
+                            <span>Ofertas exclusivas</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 scroll-fade">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">¿Por Qué Elegirnos?</h2>
+                <p class="text-xl text-gray-600">Calidad y confianza en cada producto</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center p-6 scroll-fade">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-certificate text-green-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">100% Certificados</h3>
+                    <p class="text-gray-600">Todos nuestros productos cuentan con registro INVIMA</p>
+                </div>
+
+                <div class="text-center p-6 scroll-fade" style="animation-delay: 0.1s;">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Calidad Garantizada</h3>
+                    <p class="text-gray-600">Medicamentos de laboratorios reconocidos</p>
+                </div>
+
+                <div class="text-center p-6 scroll-fade" style="animation-delay: 0.2s;">
+                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-purple-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Atención 24/7</h3>
+                    <p class="text-gray-600">Disponibles todos los días del año</p>
+                </div>
+
+                <div class="text-center p-6 scroll-fade" style="animation-delay: 0.3s;">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tags text-orange-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Mejores Precios</h3>
+                    <p class="text-gray-600">Ofertas y descuentos permanentes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-24 px-4 bg-gradient-to-r from-green-600 to-emerald-600">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-prescription-bottle-alt text-4xl"></i>
+            </div>
+            <h3 class="text-4xl font-bold mb-4">¿Necesitas tus medicamentos ahora?</h3>
+            <p class="text-xl mb-8 text-green-100">Contáctanos y recibe asesoría farmacéutica profesional</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="tel:300304444"
+                    class="bg-white text-green-600 px-10 py-4 rounded-xl font-bold text-xl hover:bg-green-50 transition-all inline-flex items-center gap-3 shadow-xl">
+                    <i class="fas fa-phone"></i>
+                    300 304 4444
+                </a>
+                <button
+                    class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-xl hover:bg-white hover:text-green-600 transition-all inline-flex items-center gap-3">
+                    <i class="fas fa-whatsapp"></i>
+                    WhatsApp
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script>
+        // Intersection Observer para animaciones
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-fade').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+    <script src="../js/js_usuarios/include.js"></script>
+    <script src="../js/js_usuarios/index.js"></script>
+</body>
+
+</html>

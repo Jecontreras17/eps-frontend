@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta General - MediFlex EPS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilo_usuario/index.css">
+    <link rel="stylesheet" href="../css/estilo_usuario/consulta.css">
+</head>
+
+<body class="font-sans antialiased">
+    <div class="top-banner">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center gap-4 md:gap-6 flex-wrap text-sm">
+                <span class="flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Calle 123, Barrio Centro, Corozal, Sucre
+                </span>
+                <span class="hidden md:inline">|</span>
+                <span class="flex items-center gap-2">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:300304444">300 304 4444</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between py-4">
+                <!-- Logo -->
+                <a href="/" class="logo-text">
+                    <i class="fas fa-hospital mr-2"></i>
+                    <span>MediFlex</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex items-center gap-8">
+                    <li><a href="./index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="./nosotros.html" class="nav-link">Nosotros</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">
+                            Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Servicios Médicos</div>
+                            <a href="./urgencia.html" class="dropdown-item">
+                                <i class="fas fa-heartbeat"></i>
+                                <span>Urgencias 24/7</span>
+                            </a>
+                            <a href="./consulta.html" class="dropdown-item">
+                                <i class="fas fa-stethoscope"></i>
+                                <span>Consulta General</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-header">Servicios Adicionales</div>
+                            <a href="./farmacia.html" class="dropdown-item">
+                                <i class="fas fa-pills"></i>
+                                <span>Farmacia</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="./contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+
+                <!-- Portal Button -->
+                <button class="hidden lg:flex btn-portal">
+                    <i class="fas fa-user-circle"></i>
+                    Portal Pacientes
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-primary text-2xl p-2" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo-text">
+                <i class="fas fa-hospital mr-2"></i>
+                <span>MediFlex</span>
+            </div>
+            <button class="close-menu" id="closeMenuBtn">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-body">
+            <ul class="mobile-nav">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        Servicios <i class="fas fa-chevron-down ml-1"></i>
+                    </a>
+                    <ul class="mobile-submenu">
+                        <li><a href="./urgencia.html"><i class="fas fa-heartbeat mr-2"></i>Urgencias 24/7</a></li>
+                        <li><a href="./consulta.html"><i class="fas fa-stethoscope mr-2"></i>Consulta General</a></li>
+                        <li><a href="./farmacia.html"><i class="fas fa-pills mr-2"></i>Farmacia</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+            <button class="btn-portal  mt-6 justify-center">
+                <i class="fas fa-user-circle"></i>
+                Portal Pacientes
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section - Diseño Minimalista Moderno -->
+    <section
+        class="ui-safe relative min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-100 via-white to-purple-100">
+
+        <!-- Decorative Elements -->
+        <div
+            class="absolute top-20 right-10 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse">
+        </div>
+        <div class="absolute bottom-20 left-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"
+            style="animation-delay: 1s;"></div>
+
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+
+            <!-- Main Heading -->
+            <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-6 leading-tight fade-in">
+                Tu Salud,<br>
+                <span
+                    class="bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                    Nuestra Misión
+                </span>
+            </h1>
+
+            <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed fade-in">
+                Atención médica general de calidad con especialistas certificados.
+                Diagnósticos precisos, tratamientos efectivos y el mejor cuidado para ti.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16 slide-in-bottom">
+                <button
+                    class="group bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
+                    <i class="fas fa-calendar-check"></i>
+                    Agendar Consulta
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </button>
+                <button
+                    class="bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 border-2 border-gray-200">
+                    <i class="fas fa-phone"></i>
+                    300 304 4444
+                </button>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto slide-in-bottom">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">15+</div>
+                    <div class="text-sm text-gray-600 font-medium">Especialistas</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">24/7</div>
+                    <div class="text-sm text-gray-600 font-medium">Atención</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">50K+</div>
+                    <div class="text-sm text-gray-600 font-medium">Pacientes</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">98%</div>
+                    <div class="text-sm text-gray-600 font-medium">Satisfacción</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Principales -->
+    <section class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 scroll-fade">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Servicios de Consulta General</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Atención médica integral para todas tus necesidades de salud
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="card-float bg-white rounded-2xl p-8 border border-gray-200 scroll-fade">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 icon-rotate">
+                        <i class="fas fa-user-md text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Evaluación Completa</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Diagnóstico preciso de síntomas, análisis de tu historial médico y recomendaciones
+                        personalizadas.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check-circle text-indigo-600"></i>
+                            <span>Examen físico detallado</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check-circle text-indigo-600"></i>
+                            <span>Análisis de síntomas</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check-circle text-indigo-600"></i>
+                            <span>Plan de tratamiento</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-float bg-white rounded-2xl p-8 border border-gray-200 scroll-fade"
+                    style="animation-delay: 0.1s;">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 icon-rotate">
+                        <i class="fas fa-heartbeat text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Seguimiento Crónico</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Control especializado de enfermedades crónicas con monitoreo constante de tu salud.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check-circle text-purple-600"></i>
+                            <span>Control de diabetes</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check-circle text-purple-600"></i>
+                            <span>Manejo de hipertensión</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check-circle text-purple-600"></i>
+                            <span>Tratamiento de asma</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-float bg-white rounded-2xl p-8 border border-gray-200 scroll-fade"
+                    style="animation-delay: 0.2s;">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 icon-rotate">
+                        <i class="fas fa-shield-virus text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Medicina Preventiva</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Chequeos regulares y programas de prevención para mantener tu salud óptima.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check-circle text-blue-600"></i>
+                            <span>Chequeos anuales</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check-circle text-blue-600"></i>
+                            <span>Vacunación completa</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check-circle text-blue-600"></i>
+                            <span>Detección temprana</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso de Atención -->
+    <section class="py-24 px-4 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 scroll-fade">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">¿Cómo Funciona?</h2>
+                <p class="text-xl text-gray-600">Simple, rápido y eficiente</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8 process-line">
+                <!-- Step 1 -->
+                <div class="text-center scroll-fade">
+                    <div
+                        class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg relative z-10">
+                        <span class="text-3xl font-bold text-indigo-600">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Agenda tu Cita</h3>
+                    <p class="text-gray-600">Llama o agenda en línea en menos de 2 minutos</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center scroll-fade" style="animation-delay: 0.1s;">
+                    <div
+                        class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg relative z-10">
+                        <span class="text-3xl font-bold text-indigo-600">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Asiste a Consulta</h3>
+                    <p class="text-gray-600">Visítanos en el horario acordado sin largas esperas</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center scroll-fade" style="animation-delay: 0.2s;">
+                    <div
+                        class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg relative z-10">
+                        <span class="text-3xl font-bold text-indigo-600">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Recibe Diagnóstico</h3>
+                    <p class="text-gray-600">Evaluación completa con nuestros especialistas</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center scroll-fade" style="animation-delay: 0.3s;">
+                    <div
+                        class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg relative z-10">
+                        <span class="text-3xl font-bold text-indigo-600">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Inicia Tratamiento</h3>
+                    <p class="text-gray-600">Plan personalizado para tu recuperación</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Síntomas - Grid Moderno -->
+    <section class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 scroll-fade">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">¿Cuándo Consultarnos?</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    No ignores las señales de tu cuerpo. Estos síntomas requieren atención médica
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <!-- Síntoma 1 -->
+                <div class="benefit-card rounded-2xl p-6 scroll-fade hover:shadow-xl transition-all">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-thermometer-half text-red-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-2">Fiebre Persistente</h3>
+                            <p class="text-gray-600 text-sm">Temperatura elevada por más de 3 días o fiebre muy alta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Síntoma 2 -->
+                <div class="benefit-card rounded-2xl p-6 scroll-fade hover:shadow-xl transition-all"
+                    style="animation-delay: 0.05s;">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-lungs text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-2">Problemas Respiratorios</h3>
+                            <p class="text-gray-600 text-sm">Dificultad para respirar, tos persistente o dolor al
+                                respirar</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Síntoma 3 -->
+                <div class="benefit-card rounded-2xl p-6 scroll-fade hover:shadow-xl transition-all"
+                    style="animation-delay: 0.1s;">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-head-side-cough text-yellow-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-2">Dolor de Cabeza Severo</h3>
+                            <p class="text-gray-600 text-sm">Migrañas intensas o dolores de cabeza inusuales</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Síntoma 4 -->
+                <div class="benefit-card rounded-2xl p-6 scroll-fade hover:shadow-xl transition-all"
+                    style="animation-delay: 0.15s;">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-stomach text-green-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-2">Molestias Digestivas</h3>
+                            <p class="text-gray-600 text-sm">Dolor abdominal, náuseas o problemas digestivos prolongados
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Síntoma 5 -->
+                <div class="benefit-card rounded-2xl p-6 scroll-fade hover:shadow-xl transition-all"
+                    style="animation-delay: 0.2s;">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-allergies text-purple-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-2">Reacciones Alérgicas</h3>
+                            <p class="text-gray-600 text-sm">Erupciones cutáneas, hinchazón o picazón intensa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Síntoma 6 -->
+                <div class="benefit-card rounded-2xl p-6 scroll-fade hover:shadow-xl transition-all"
+                    style="animation-delay: 0.25s;">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-bone text-orange-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-2">Dolor Muscular o Articular</h3>
+                            <p class="text-gray-600 text-sm">Dolores persistentes, rigidez o inflamación en
+                                articulaciones</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Banner -->
+            <div
+                class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-10 text-center text-white scroll-fade">
+                <h3 class="text-3xl font-bold mb-4">¿Experimentas alguno de estos síntomas?</h3>
+                <p class="text-xl mb-8 text-indigo-100">No esperes más. La atención temprana es clave para tu salud</p>
+                <button
+                    class="bg-white text-indigo-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all inline-flex items-center gap-2 shadow-xl">
+                    <i class="fas fa-calendar-check"></i>
+                    Agendar Consulta de Emergencia
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <div id="footer"></div>
+
+    <script>
+        // Intersection Observer para animaciones al scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-fade').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+    <script src="../js/js_usuarios/include.js"></script>
+    <script src="../js/js_usuarios/index.js"></script>
+
+</body>
+
+</html>

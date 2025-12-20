@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Atención médica de urgencias 24/7 con servicios de laboratorio, radiología y más.">
+    <title>Urgencias 24/7 - Servicios Médicos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilo_usuario/index.css">
+</head>
+
+<body class="font-sans antialiased">
+    <div class="top-banner">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center gap-4 md:gap-6 flex-wrap text-sm">
+                <span class="flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Calle 123, Barrio Centro, Corozal, Sucre
+                </span>
+                <span class="hidden md:inline">|</span>
+                <span class="flex items-center gap-2">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:300304444">300 304 4444</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between py-4">
+                <!-- Logo -->
+                <a href="/" class="logo-text">
+                    <i class="fas fa-hospital mr-2"></i>
+                    <span>MediFlex</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex items-center gap-8">
+                    <li><a href="./index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="./nosotros.html" class="nav-link">Nosotros</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">
+                            Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Servicios Médicos</div>
+                            <a href="./urgencia.html" class="dropdown-item">
+                                <i class="fas fa-heartbeat"></i>
+                                <span>Urgencias 24/7</span>
+                            </a>
+                            <a href="./consulta.html" class="dropdown-item">
+                                <i class="fas fa-stethoscope"></i>
+                                <span>Consulta General</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-header">Servicios Adicionales</div>
+                            <a href="./farmacia.html" class="dropdown-item">
+                                <i class="fas fa-pills"></i>
+                                <span>Farmacia</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="./contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+
+                <!-- Portal Button -->
+                <button class="hidden lg:flex btn-portal">
+                    <i class="fas fa-user-circle"></i>
+                    Portal Pacientes
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-primary text-2xl p-2" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo-text">
+                <i class="fas fa-hospital mr-2"></i>
+                <span>MediFlex</span>
+            </div>
+            <button class="close-menu" id="closeMenuBtn">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-body">
+            <ul class="mobile-nav">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        Servicios <i class="fas fa-chevron-down ml-1"></i>
+                    </a>
+                    <ul class="mobile-submenu">
+                        <li><a href="./urgencia.html"><i class="fas fa-heartbeat mr-2"></i>Urgencias 24/7</a></li>
+                        <li><a href="./consulta.html"><i class="fas fa-stethoscope mr-2"></i>Consulta General</a></li>
+                        <li><a href="./farmacia.html"><i class="fas fa-pills mr-2"></i>Farmacia</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+            <button class="btn-portal  mt-6 justify-center">
+                <i class="fas fa-user-circle"></i>
+                Portal Pacientes
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section con gradiente suave -->
+    <section class="bg-gradient-to-r from-blue-500 to-blue-600 text-white">
+        <div class="container mx-auto px-4 py-16">
+            <div class="max-w-4xl mx-auto text-center">
+                <div
+                    class="inline-flex items-center bg-white bg-opacity-20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                    <span class="w-2 h-2 bg-red-400 rounded-full mr-2 animate-pulse"></span>
+                    Servicio Activo 24/7
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-4">
+                    Servicio de Urgencias
+                </h1>
+                <p class="text-xl text-blue-100 mb-8">
+                    Atención médica inmediata con personal especializado y tecnología de última generación
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="tel:300304444"
+                        class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center shadow-lg">
+                        <i class="fas fa-phone mr-2"></i>
+                        Llamar: 300304444
+                    </a>
+                    <button
+                        class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                        Ver Ubicación
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Información de Tiempo de Atención -->
+    <section class="bg-gradient-to-r from-teal-500 to-green-500 text-white py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center items-center gap-8 text-center">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-clock text-2xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-sm opacity-90">Tiempo promedio</div>
+                        <div class="font-bold text-lg">5 minutos</div>
+                    </div>
+                </div>
+                <div class="hidden md:block w-px h-12 bg-white opacity-30"></div>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-user-md text-2xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-sm opacity-90">Médicos disponibles</div>
+                        <div class="font-bold text-lg">24 horas</div>
+                    </div>
+                </div>
+                <div class="hidden md:block w-px h-12 bg-white opacity-30"></div>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-ambulance text-2xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-sm opacity-90">Ambulancia</div>
+                        <div class="font-bold text-lg">Disponible</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="py-16">
+        <!-- Servicios de Urgencias -->
+        <section class="container mx-auto px-4 mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Servicios Disponibles</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Contamos con equipos médicos especializados y tecnología avanzada para brindar atención integral
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                <!-- Servicio 1 -->
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg border-2 border-blue-200 p-6 hover:shadow-lg hover:border-blue-300 transition-all">
+                    <div class="flex items-start mb-4">
+                        <div
+                            class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                            <i class="fas fa-heartbeat text-2xl text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Cardiología de Emergencia</h3>
+                            <p class="text-gray-700">Electrocardiogramas y atención inmediata para eventos cardíacos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div
+                    class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg border-2 border-green-200 p-6 hover:shadow-lg hover:border-green-300 transition-all">
+                    <div class="flex items-start mb-4">
+                        <div
+                            class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                            <i class="fas fa-x-ray text-2xl text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Radiología e Imágenes</h3>
+                            <p class="text-gray-700">Radiografías digitales con resultados en minutos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div
+                    class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg border-2 border-purple-200 p-6 hover:shadow-lg hover:border-purple-300 transition-all">
+                    <div class="flex items-start mb-4">
+                        <div
+                            class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                            <i class="fas fa-flask text-2xl text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Laboratorio Clínico</h3>
+                            <p class="text-gray-700">Análisis de sangre, orina y otros exámenes urgentes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div
+                    class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg border-2 border-red-200 p-6 hover:shadow-lg hover:border-red-300 transition-all">
+                    <div class="flex items-start mb-4">
+                        <div
+                            class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                            <i class="fas fa-procedures text-2xl text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Unidad de Cuidados Intensivos</h3>
+                            <p class="text-gray-700">Atención especializada para pacientes críticos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 5 -->
+                <div
+                    class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg border-2 border-orange-200 p-6 hover:shadow-lg hover:border-orange-300 transition-all">
+                    <div class="flex items-start mb-4">
+                        <div
+                            class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                            <i class="fas fa-user-md text-2xl text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Trauma y Cirugía</h3>
+                            <p class="text-gray-700">Atención quirúrgica de emergencia disponible 24/7</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 6 -->
+                <div
+                    class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg border-2 border-teal-200 p-6 hover:shadow-lg hover:border-teal-300 transition-all">
+                    <div class="flex items-start mb-4">
+                        <div
+                            class="w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                            <i class="fas fa-pills text-2xl text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Farmacia de Urgencias</h3>
+                            <p class="text-gray-700">Medicamentos disponibles las 24 horas del día</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cuándo acudir -->
+        <section class="bg-gradient-to-b from-gray-50 to-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-bold text-gray-900 mb-4">¿Cuándo debe acudir a urgencias?</h2>
+                        <p class="text-lg text-gray-600">
+                            Estas son señales de alerta que requieren atención médica inmediata
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Columna Izquierda -->
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                                <span
+                                    class="w-8 h-8 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-full flex items-center justify-center mr-3 text-sm shadow-md">!</span>
+                                Emergencias Vitales
+                            </h3>
+
+                            <div
+                                class="flex items-start p-4 bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500 rounded-r hover:shadow-md transition-shadow">
+                                <i class="fas fa-heart-pulse text-red-500 text-xl mt-1 mr-4 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Dolor de pecho intenso</h4>
+                                    <p class="text-sm text-gray-600">Especialmente si se irradia al brazo, mandíbula o
+                                        espalda</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-start p-4 bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500 rounded-r hover:shadow-md transition-shadow">
+                                <i class="fas fa-lungs text-red-500 text-xl mt-1 mr-4 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Dificultad para respirar</h4>
+                                    <p class="text-sm text-gray-600">Falta de aire severa o respiración acelerada</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-start p-4 bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500 rounded-r hover:shadow-md transition-shadow">
+                                <i class="fas fa-brain text-red-500 text-xl mt-1 mr-4 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Alteración del estado mental</h4>
+                                    <p class="text-sm text-gray-600">Confusión, pérdida de consciencia o convulsiones
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-start p-4 bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500 rounded-r hover:shadow-md transition-shadow">
+                                <i class="fas fa-droplet text-red-500 text-xl mt-1 mr-4 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Sangrado severo</h4>
+                                    <p class="text-sm text-gray-600">Hemorragia que no se detiene con presión directa
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-start p-4 bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500 rounded-r hover:shadow-md transition-shadow">
+                                <i class="fas fa-head-side-virus text-red-500 text-xl mt-1 mr-4 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Trauma craneal</h4>
+                                    <p class="text-sm text-gray-600">Golpe en la cabeza con pérdida de conocimiento</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Columna Derecha -->
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                                <span
+                                    class="w-8 h-8 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full flex items-center justify-center mr-3 text-sm shadow-md">!</span>
+                                Situaciones Urgentes
+                            </h3>
+
+                            <div
+                                class="flex items-start p-4 bg-gradient-to-r from-orange-50 to-yellow-50 border-l-4 border-orange-500 rounded-r hover:shadow-md transition-shadow">
+                                <i class="fas fa-bone text-orange-600 text-xl mt-1 mr-4 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Fracturas o lesiones graves</h4>
+                                    <p class="text-sm text-gray-600">Deformidad visible o dolor intenso en extremidades
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-start p-4 bg-gradient-to-r from-orange-50 to-yellow-50 border-l-4 border-orange-500 rounded-r hover:shadow-md transition-shadow">
+                                <i class="fas fa-fire text-orange-600 text-xl mt-1 mr-4 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Quemaduras extensas</h4>
+                                    <p class="text-sm text-gray-600">Quemaduras de segundo o tercer grado</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-start p-4 bg-gradient-to-r from-orange-50 to-yellow-50 border-l-4 border-orange-500 rounded-r hover:shadow-md transition-shadow">
+                                <i class="fas fa-vial text-orange-600 text-xl mt-1 mr-4 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Intoxicación</h4>
+                                    <p class="text-sm text-gray-600">Ingestión de sustancias tóxicas o medicamentos</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-start p-4 bg-gradient-to-r from-orange-50 to-yellow-50 border-l-4 border-orange-500 rounded-r hover:shadow-md transition-shadow">
+                                <i class="fas fa-temperature-high text-orange-600 text-xl mt-1 mr-4 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Fiebre alta persistente</h4>
+                                    <p class="text-sm text-gray-600">Especialmente en niños pequeños o adultos mayores
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-start p-4 bg-gradient-to-r from-orange-50 to-yellow-50 border-l-4 border-orange-500 rounded-r hover:shadow-md transition-shadow">
+                                <i class="fas fa-baby text-orange-600 text-xl mt-1 mr-4 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Emergencias obstétricas</h4>
+                                    <p class="text-sm text-gray-600">Sangrado vaginal o dolor abdominal en embarazo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div
+                    class="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-12 text-center text-white shadow-2xl">
+                    <div
+                        class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-phone-volume text-4xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4">¿Necesita atención inmediata?</h3>
+                    <p class="text-xl mb-8 text-blue-100">No dude en contactarnos. Cada minuto cuenta en una emergencia
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="tel:300304444"
+                            class="bg-white text-blue-600 px-10 py-4 rounded-lg font-bold text-2xl hover:bg-blue-50 transition-colors inline-flex items-center shadow-lg">
+                            <i class="fas fa-phone mr-3"></i>
+                            300304444
+                        </a>
+                        <div class="text-left">
+                            <div class="font-semibold">Línea de emergencias</div>
+                            <div class="text-blue-200 text-sm">Disponible las 24 horas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div id="footer"></div>
+
+
+    </main>
+    <script src="../js/js_usuarios/include.js"></script>
+    <script src="../js/js_usuarios/index.js"></script>
+</body>
+
+</html>

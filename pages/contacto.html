@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - MediFlex EPS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilo_usuario/index.css">
+</head>
+
+<body class="font-sans antialiased bg-gray-50">
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center gap-4 md:gap-6 flex-wrap text-sm">
+                <span class="flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Calle 123, Barrio Centro, Corozal, Sucre
+                </span>
+                <span class="hidden md:inline">|</span>
+                <span class="flex items-center gap-2">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:300304444">300 304 4444</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between py-4">
+                <a href="/" class="logo-text">
+                    <i class="fas fa-hospital mr-2"></i>
+                    <span>MediFlex</span>
+                </a>
+
+                <ul class="hidden lg:flex items-center gap-8">
+                    <li><a href="./index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="./nosotros.html" class="nav-link">Nosotros</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">
+                            Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Servicios Médicos</div>
+                            <a href="./urgencia.html" class="dropdown-item">
+                                <i class="fas fa-heartbeat"></i>
+                                <span>Urgencias 24/7</span>
+                            </a>
+                            <a href="./consulta.html" class="dropdown-item">
+                                <i class="fas fa-stethoscope"></i>
+                                <span>Consulta General</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-header">Servicios Adicionales</div>
+                            <a href="./farmacia.html" class="dropdown-item">
+                                <i class="fas fa-pills"></i>
+                                <span>Farmacia</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="./contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+
+                <button class="hidden lg:flex btn-portal">
+                    <i class="fas fa-user-circle"></i>
+                    Portal Pacientes
+                </button>
+
+                <button class="lg:hidden text-primary text-2xl p-2" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo-text">
+                <i class="fas fa-hospital mr-2"></i>
+                <span>MediFlex</span>
+            </div>
+            <button class="close-menu" id="closeMenuBtn">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-body">
+            <ul class="mobile-nav">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        Servicios <i class="fas fa-chevron-down ml-1"></i>
+                    </a>
+                    <ul class="mobile-submenu">
+                        <li><a href="./urgencia.html"><i class="fas fa-heartbeat mr-2"></i>Urgencias 24/7</a></li>
+                        <li><a href="./consulta.html"><i class="fas fa-stethoscope mr-2"></i>Consulta General</a></li>
+                        <li><a href="./farmacia.html"><i class="fas fa-pills mr-2"></i>Farmacia</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+            <button class="btn-portal mt-6 justify-center">
+                <i class="fas fa-user-circle"></i>
+                Portal Pacientes
+            </button>
+        </div>
+    </div>
+
+    <!-- Emergency Banner -->
+
+
+    <!-- Hero Section -->
+    <section class="py-16 px-4 bg-white medical-pattern">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12 fade-up">
+                <h1 class="text-5xl md:text-6xl font-black text-gray-900 mb-4">
+                    Contáctanos
+                </h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Estamos aquí para atender todas tus necesidades de salud. Elige el canal de tu preferencia.
+                </p>
+            </div>
+
+            <!-- Contact Channels Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <!-- PQR -->
+                <div
+                    class="service-card gradient-border-card bg-white rounded-3xl p-8 shadow-lg fade-up stagger-delay-1">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-file-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 text-center mb-3">PQR</h3>
+                    <p class="text-gray-600 text-center text-sm mb-4">Peticiones, Quejas y Reclamos</p>
+                    <button
+                        class="channel-btn w-full bg-blue-50 hover:bg-blue-100 text-blue-600 font-semibold py-3 rounded-xl transition-colors">
+                        Crear PQR
+                    </button>
+                </div>
+
+                <!-- Citas -->
+                <div
+                    class="service-card gradient-border-card bg-white rounded-3xl p-8 shadow-lg fade-up stagger-delay-2">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-calendar-check text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 text-center mb-3">Citas Médicas</h3>
+                    <p class="text-gray-600 text-center text-sm mb-4">Agenda tu consulta médica</p>
+                    <button
+                        class="channel-btn w-full bg-green-50 hover:bg-green-100 text-green-600 font-semibold py-3 rounded-xl transition-colors">
+                        Agendar Cita
+                    </button>
+                </div>
+
+                <!-- Autorizaciones -->
+                <div
+                    class="service-card gradient-border-card bg-white rounded-3xl p-8 shadow-lg fade-up stagger-delay-3">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-check-circle text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 text-center mb-3">Autorizaciones</h3>
+                    <p class="text-gray-600 text-center text-sm mb-4">Solicita autorizaciones médicas</p>
+                    <button
+                        class="channel-btn w-full bg-purple-50 hover:bg-purple-100 text-purple-600 font-semibold py-3 rounded-xl transition-colors">
+                        Solicitar
+                    </button>
+                </div>
+
+                <!-- Información -->
+                <div
+                    class="service-card gradient-border-card bg-white rounded-3xl p-8 shadow-lg fade-up stagger-delay-4">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-info-circle text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 text-center mb-3">Información</h3>
+                    <p class="text-gray-600 text-center text-sm mb-4">Consultas generales</p>
+                    <button
+                        class="channel-btn w-full bg-orange-50 hover:bg-orange-100 text-orange-600 font-semibold py-3 rounded-xl transition-colors">
+                        Contactar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="ui-safe emergency-banner text-white py-4 mt-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-center gap-4 flex-wrap text-center">
+                <i class="fas fa-ambulance text-2xl icon-bounce"></i>
+                <div>
+                    <span class="font-bold text-lg">Línea de Emergencias 24/7</span>
+                    <span class="mx-3">|</span>
+                    <a href="tel:123" class="text-xl font-black hover:underline">123</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Form Section -->
+    <section class="py-20 px-4 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-5 gap-12">
+                <!-- Left Side - Contact Info -->
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="fade-up">
+                        <h2 class="text-4xl font-black text-gray-900 mb-4">
+                            Estamos para Servirte
+                        </h2>
+                        <p class="text-lg text-gray-600 mb-8">
+                            Completa el formulario y nuestro equipo te contactará en menos de 24 horas.
+                        </p>
+                    </div>
+
+                    <!-- Contact Methods -->
+                    <div class="space-y-4">
+                        <!-- Phone -->
+                        <a href="tel:300304444"
+                            class="info-card flex items-center gap-4 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-phone-alt text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm font-semibold text-gray-500 uppercase">Teléfono</div>
+                                <div class="text-lg font-bold text-gray-900">300 304 4444</div>
+                            </div>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:contacto@mediflex.com"
+                            class="info-card flex items-center gap-4 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-envelope text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm font-semibold text-gray-500 uppercase">Email</div>
+                                <div class="text-lg font-bold text-gray-900">contacto@mediflex.com</div>
+                            </div>
+                        </a>
+
+                        <!-- Location -->
+                        <div class="info-card flex items-center gap-4 p-6 rounded-2xl shadow-lg">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm font-semibold text-gray-500 uppercase">Ubicación</div>
+                                <div class="text-sm font-bold text-gray-900">Calle 123, Barrio Centro<br>Corozal, Sucre
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hours -->
+                    <div class="info-card p-6 rounded-2xl shadow-lg">
+                        <h3 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <i class="fas fa-clock text-indigo-600"></i>
+                            Horarios de Atención
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Lunes - Viernes</span>
+                                <span class="font-semibold text-gray-900">7:00 AM - 7:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Sábados</span>
+                                <span class="font-semibold text-gray-900">8:00 AM - 2:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Domingos</span>
+                                <span class="font-semibold text-red-600">Cerrado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Form -->
+                <div class="lg:col-span-3">
+                    <form id="contactForm" class="bg-white rounded-3xl shadow-2xl p-8 md:p-10 fade-up">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Envíanos un Mensaje</h3>
+
+                        <div class="space-y-6">
+                            <!-- Name & Document -->
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="relative">
+                                    <input type="text" name="nombre" placeholder=" " required
+                                        class="form-input peer w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-indigo-500 focus:outline-none transition-all">
+                                    <label
+                                        class="form-floating-label absolute left-4 top-4 text-gray-500 pointer-events-none">
+                                        Nombre Completo *
+                                    </label>
+                                </div>
+
+                                <div class="relative">
+                                    <input type="text" name="documento" placeholder=" " required
+                                        class="form-input peer w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-indigo-500 focus:outline-none transition-all">
+                                    <label
+                                        class="form-floating-label absolute left-4 top-4 text-gray-500 pointer-events-none">
+                                        N° Documento *
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Email & Phone -->
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="relative">
+                                    <input type="email" name="email" placeholder=" " required
+                                        class="form-input peer w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-indigo-500 focus:outline-none transition-all">
+                                    <label
+                                        class="form-floating-label absolute left-4 top-4 text-gray-500 pointer-events-none">
+                                        Email *
+                                    </label>
+                                </div>
+
+                                <div class="relative">
+                                    <input type="tel" name="telefono" placeholder=" "
+                                        class="form-input peer w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-indigo-500 focus:outline-none transition-all">
+                                    <label
+                                        class="form-floating-label absolute left-4 top-4 text-gray-500 pointer-events-none">
+                                        Teléfono
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Type -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Tipo de Solicitud *
+                                </label>
+                                <select name="tipo" required
+                                    class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-indigo-500 focus:outline-none transition-all">
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="pqr">PQR (Petición, Queja o Reclamo)</option>
+                                    <option value="cita">Solicitud de Cita</option>
+                                    <option value="autorizacion">Autorización Médica</option>
+                                    <option value="afiliacion">Afiliación</option>
+                                    <option value="informacion">Información General</option>
+                                    <option value="otros">Otros</option>
+                                </select>
+                            </div>
+
+                            <!-- Message -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Mensaje *
+                                </label>
+                                <textarea name="mensaje" required rows="5"
+                                    placeholder="Describe tu solicitud con el mayor detalle posible..."
+                                    class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-indigo-500 focus:outline-none transition-all resize-none"></textarea>
+                            </div>
+
+                            <!-- Privacy -->
+                            <div class="flex items-start gap-3">
+                                <input type="checkbox" id="privacy" required
+                                    class="mt-1 w-5 h-5 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+                                <label for="privacy" class="text-sm text-gray-600">
+                                    Acepto la <a href="#" class="text-indigo-600 hover:underline font-semibold">Política
+                                        de Privacidad</a> y el tratamiento de mis datos personales de acuerdo con la Ley
+                                    1581 de 2012.
+                                </label>
+                            </div>
+
+                            <!-- Submit -->
+                            <button type="submit"
+                                class="w-full  btn-portal from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group pulse-medical">
+                                <i class="fas fa-paper-plane"></i>
+                                Enviar Mensaje
+                                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-black text-gray-900 mb-4">Nuestra Ubicación</h2>
+                <p class="text-lg text-gray-600">Visítanos en nuestras instalaciones</p>
+            </div>
+
+            <div class="rounded-3xl overflow-hidden shadow-2xl h-96">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.3!2d-75.3!3d9.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMTgnMDAuMCJOIDc1wrAxOCcwMC4wIlc!5e0!3m2!1ses!2sco!4v1234567890"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const button = this.querySelector('button[type="submit"]');
+            const originalHTML = button.innerHTML;
+
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            button.disabled = true;
+            button.classList.remove('pulse-medical');
+
+            setTimeout(() => {
+                button.innerHTML = '<i class="fas fa-check-circle"></i> ¡Mensaje Enviado Exitosamente!';
+                button.classList.remove('from-indigo-600', 'to-purple-600');
+                button.classList.add('from-green-500', 'to-emerald-600');
+
+                setTimeout(() => {
+                    this.reset();
+                    button.innerHTML = originalHTML;
+                    button.classList.remove('from-green-500', 'to-emerald-600');
+                    button.classList.add('from-indigo-600', 'to-purple-600', 'pulse-medical');
+                    button.disabled = false;
+                }, 3000);
+            }, 2000);
+        });
+    </script>
+    <script src="../js/js_usuarios/include.js"></script>
+    <script src="../js/js_usuarios/index.js"></script>
+</body>
+
+</html>
