@@ -65,7 +65,7 @@ body {
     color: var(--dark);
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     position: relative;
     padding: 0.5rem 0;
     transition: var(--transition);
@@ -284,9 +284,6 @@ body.menu-open {
         transform: translateY(0);
     }
 }
-
-
-
 
 /* HERO SECTION */
 .hero-section {
@@ -931,6 +928,250 @@ body.menu-open {
     box-shadow: 0 8px 30px rgba(0, 102, 204, 0.4);
 }
 
+/* servicos de la pagina de inicio */
+
+/* Atencion prioritaria */
+
+ @keyframes fadeInUp {
+     from {
+         opacity: 0;
+         transform: translateY(30px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ .fade-in-up {
+     animation: fadeInUp 0.6s ease-out forwards;
+ }
+
+ .delay-1 {
+     animation-delay: 0.1s;
+     opacity: 0;
+ }
+
+ .delay-2 {
+     animation-delay: 0.2s;
+     opacity: 0;
+ }
+
+ .delay-3 {
+     animation-delay: 0.3s;
+     opacity: 0;
+ }
+
+ .delay-4 {
+     animation-delay: 0.4s;
+     opacity: 0;
+ }
+
+ /* Citas */
+
+        @keyframes fadeInUp {
+           from {
+               opacity: 0;
+               transform: translateY(30px);
+           }
+
+           to {
+               opacity: 1;
+               transform: translateY(0);
+           }
+       }
+
+       .fade-in-up {
+           animation: fadeInUp 0.6s ease-out forwards;
+       }
+
+       .delay-1 {
+           animation-delay: 0.1s;
+           opacity: 0;
+       }
+
+       .delay-2 {
+           animation-delay: 0.2s;
+           opacity: 0;
+       }
+
+       .delay-3 {
+           animation-delay: 0.3s;
+           opacity: 0;
+       }
+
+       .delay-4 {
+           animation-delay: 0.4s;
+           opacity: 0;
+       }
+
+
+/* Medicamentos */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.delay-4 {
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+/* Especialista */
+
+   @keyframes fadeInUp {
+       from {
+           opacity: 0;
+           transform: translateY(30px);
+       }
+
+       to {
+           opacity: 1;
+           transform: translateY(0);
+       }
+   }
+
+   @keyframes slideInLeft {
+       from {
+           opacity: 0;
+           transform: translateX(-50px);
+       }
+
+       to {
+           opacity: 1;
+           transform: translateX(0);
+       }
+   }
+
+   @keyframes slideInRight {
+       from {
+           opacity: 0;
+           transform: translateX(50px);
+       }
+
+       to {
+           opacity: 1;
+           transform: translateX(0);
+       }
+   }
+
+   @keyframes float {
+
+       0%,
+       100% {
+           transform: translateY(0px);
+       }
+
+       50% {
+           transform: translateY(-20px);
+       }
+   }
+
+   .fade-in-up {
+       animation: fadeInUp 0.6s ease-out forwards;
+   }
+
+   .slide-in-left {
+       animation: slideInLeft 0.8s ease-out forwards;
+   }
+
+   .slide-in-right {
+       animation: slideInRight 0.8s ease-out forwards;
+   }
+
+   .float {
+       animation: float 3s ease-in-out infinite;
+   }
+
+   .delay-1 {
+       animation-delay: 0.1s;
+       opacity: 0;
+   }
+
+   .delay-2 {
+       animation-delay: 0.2s;
+       opacity: 0;
+   }
+
+   .delay-3 {
+       animation-delay: 0.3s;
+       opacity: 0;
+   }
+
+   .delay-4 {
+       animation-delay: 0.4s;
+       opacity: 0;
+   }
+
+   .specialty-card {
+       transition: all 0.3s ease;
+   }
+
+   .specialty-card:hover {
+       transform: translateY(-10px) scale(1.02);
+   }
+
+
 /* ====================================
    FOOTER
    ==================================== */
@@ -1104,3 +1345,479 @@ body.menu-open {
         font-size: 2.5rem;
     }
 }
+
+/* Pagina de nosotros */
+
+.header-curve {
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+    z-index: 4;
+}
+
+.header-curve .header-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(1px);
+    background: linear-gradient(135deg, rgba(0, 136, 204, 0.7) 0%, rgba(0, 204, 136, 0.6) 100%);
+    z-index: 1;
+}
+
+.curve {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: white;
+    border-radius: 100% 100% 0 0;
+    z-index: 3;
+}
+
+.overlay-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.values-item {
+    padding: 10px;
+    margin: 5px 0;
+    border-left: 3px solid #0088cc;
+}
+
+/* pagina consulta*/
+
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+   * {
+       font-family: 'Inter', sans-serif;
+   }
+
+
+   .card-float {
+       transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+   }
+
+   .card-float:hover {
+       transform: translateY(-8px);
+       box-shadow: 0 20px 60px rgba(99, 102, 241, 0.15);
+   }
+
+   .pulse-dot {
+       animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+   }
+
+   @keyframes pulse {
+
+       0%,
+       100% {
+           opacity: 1;
+       }
+
+       50% {
+           opacity: 0.5;
+       }
+   }
+
+   .slide-in-bottom {
+       animation: slideInBottom 0.6s ease-out;
+   }
+
+   @keyframes slideInBottom {
+       from {
+           transform: translateY(100px);
+           opacity: 0;
+       }
+
+       to {
+           transform: translateY(0);
+           opacity: 1;
+       }
+   }
+
+   .fade-in {
+       animation: fadeIn 0.8s ease-out;
+   }
+
+   @keyframes fadeIn {
+       from {
+           opacity: 0;
+       }
+
+       to {
+           opacity: 1;
+       }
+   }
+
+   .icon-rotate {
+       transition: transform 0.3s ease;
+   }
+
+   .card-float:hover .icon-rotate {
+       transform: rotate(10deg) scale(1.1);
+   }
+
+   .process-line {
+       position: relative;
+   }
+
+   .process-line::after {
+       content: '';
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       width: 100%;
+       height: 2px;
+       background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+       transform: translateY(-50%);
+       z-index: -1;
+   }
+
+   @media (max-width: 768px) {
+       .process-line::after {
+           display: none;
+       }
+   }
+
+   .benefit-card {
+       backdrop-filter: blur(10px);
+       background: rgba(255, 255, 255, 0.8);
+       border: 1px solid rgba(99, 102, 241, 0.1);
+   }
+
+   .scroll-fade {
+       opacity: 0;
+       transform: translateY(30px);
+       transition: all 0.6s ease-out;
+   }
+
+   .scroll-fade.visible {
+       opacity: 1;
+       transform: translateY(0);
+   }
+
+
+    /* farmacia */
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    * {
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* HERO SECTION - FARMACIA */
+    section.hero-farmacia {
+        --primary: #10b981;
+        --primary-dark: #059669;
+        --secondary: #34d399;
+        --accent: #6ee7b7;
+        background: linear-gradient(180deg, #f0fdf4 0%, #d1fae5 50%, #f0fdf4 100%) !important;
+    }
+
+    section.hero-farmacia a[href^="tel"] {
+        background-color: #10b981 !important;
+        background: #10b981 !important;
+        color: #ffffff !important;
+    }
+
+    section.hero-farmacia a[href^="tel"]:hover {
+        background-color: #059669 !important;
+    }
+
+    section.hero-farmacia button {
+        background-color: #ffffff !important;
+        color: #10b981 !important;
+        border: 2px solid #d1fae5 !important;
+    }
+
+    section.hero-farmacia h1 {
+        color: #111827 !important;
+    }
+
+    section.hero-farmacia p {
+        color: #4b5563 !important;
+    }
+
+    section.hero-farmacia .text-4xl {
+        color: #10b981 !important;
+    }
+
+    section.hero-farmacia h1 span {
+        background: linear-gradient(to right, #10b981, #34d399, #10b981) !important;
+        -webkit-background-clip: text !important;
+        background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+    }
+
+    .card-hover {
+        transition: all 0.3s ease;
+    }
+
+    .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
+    }
+
+    .pulse-dot {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    @keyframes pulse {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0.5;
+        }
+    }
+
+    .fade-in {
+        animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .slide-up {
+        animation: slideUp 0.6s ease-out;
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+        .scroll-fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .scroll-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .category-badge {
+            transition: all 0.3s ease;
+        }
+
+        .category-badge:hover {
+            transform: scale(1.05);
+        }
+
+
+        /* Pagina contacto */
+
+           @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .medical-pattern {
+            background-image:
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(99, 102, 241, 0.03) 35px, rgba(99, 102, 241, 0.03) 70px),
+                repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(139, 92, 246, 0.03) 35px, rgba(139, 92, 246, 0.03) 70px);
+        }
+
+        .service-card {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.25);
+        }
+
+        .channel-btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .channel-btn::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .channel-btn:hover::after {
+            transform: scaleX(1);
+        }
+
+        .pulse-medical {
+            animation: pulseMedical 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseMedical {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+        }
+
+        .fade-up {
+            animation: fadeUp 0.6s ease-out;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stagger-delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .stagger-delay-2 {
+            animation-delay: 0.2s;
+        }
+
+        .stagger-delay-3 {
+            animation-delay: 0.3s;
+        }
+
+        .stagger-delay-4 {
+            animation-delay: 0.4s;
+        }
+
+        .form-floating-label {
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus~.form-floating-label,
+        .form-input:not(:placeholder-shown)~.form-floating-label {
+            transform: translateY(-24px) scale(0.85);
+            color: #6366f1;
+        }
+
+        .info-card {
+            backdrop-filter: blur(10px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .emergency-banner {
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            animation: emergencyPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes emergencyPulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+            }
+
+            50% {
+                box-shadow: 0 0 0 15px rgba(220, 38, 38, 0);
+            }
+        }
+
+        .icon-bounce {
+            animation: iconBounce 2s ease-in-out infinite;
+        }
+
+        @keyframes iconBounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .gradient-border-card {
+            position: relative;
+            background: white;
+        }
+
+        .gradient-border-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 1.5rem;
+            padding: 2px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gradient-border-card:hover::before {
+            opacity: 1;
+        }
