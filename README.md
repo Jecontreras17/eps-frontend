@@ -1,2 +1,3 @@
 # eps-frontend
-Portal web frontend para una EPS. Permite a los afiliados consultar medicamentos disponible
+Portal web frontend para una EPS. Permite afiliarte y verificar tus medicamentos
+
