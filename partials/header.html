@@ -1,0 +1,106 @@
+    <div class="top-banner">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center gap-4 md:gap-6 flex-wrap text-sm">
+                <span class="flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Calle 123, Barrio Centro, Corozal, Sucre
+                </span>
+                <span class="hidden md:inline">|</span>
+                <span class="flex items-center gap-2">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:300304444">300 304 4444</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Header -->
+        <header class="main-header">
+            <div class="container mx-auto px-4">
+                <nav class="flex items-center justify-between py-4">
+                    <!-- Logo -->
+                    <a href="/" class="logo-text">
+                        <i class="fas fa-hospital mr-2"></i>
+                        <span>MediFlex</span>
+                    </a>
+
+                    <!-- Desktop Menu -->
+                    <ul class="hidden lg:flex items-center gap-8">
+                        <li><a href="./index.html" class="nav-link">Inicio</a></li>
+                        <li><a href="./nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link">
+                                Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-header">Servicios Médicos</div>
+                                <a href="./urgencia.html" class="dropdown-item">
+                                    <i class="fas fa-heartbeat"></i>
+                                    <span>Urgencias 24/7</span>
+                                </a>
+                                <a href="./consulta.html" class="dropdown-item">
+                                    <i class="fas fa-stethoscope"></i>
+                                    <span>Consulta General</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <div class="dropdown-header">Servicios Adicionales</div>
+                                <a href="./farmacia.html" class="dropdown-item">
+                                    <i class="fas fa-pills"></i>
+                                    <span>Farmacia</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li><a href="./contacto.html" class="nav-link">Contacto</a></li>
+                    </ul>
+
+                    <!-- Portal Button -->
+                  <a href="login.html" class="hidden lg:inline-block">
+                    <button class="flex btn-portal w-full">
+                        <i class="fas fa-user-circle"></i>
+                        Portal Pacientes
+                    </button>
+                </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="lg:hidden text-primary text-2xl p-2" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <div class="logo-text">
+                    <i class="fas fa-hospital mr-2"></i>
+                    <span>MediFlex</span>
+                </div>
+                <button class="close-menu" id="closeMenuBtn">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div class="mobile-menu-body">
+                <ul class="mobile-nav">
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li>
+                        <a href="#" class="mobile-dropdown-toggle">
+                            Servicios <i class="fas fa-chevron-down ml-1"></i>
+                        </a>
+                        <ul class="mobile-submenu">
+                            <li><a href="./urgencia.html"><i class="fas fa-heartbeat mr-2"></i>Urgencias 24/7</a></li>
+                            <li><a href="./consulta.html"><i class="fas fa-stethoscope mr-2"></i>Consulta General</a>
+                            </li>
+                            <li><a href="./farmacia.html"><i class="fas fa-pills mr-2"></i>Farmacia</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+                <a href="login.html" class="btn-portal mt-6 justify-center">
+                    <i class="fas fa-user-circle"></i>
+                    Portal Pacientes
+                </a>
+         </div>
+        </div>

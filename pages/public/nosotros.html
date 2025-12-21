@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - MediFlex</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+
+<body class="font-sans antialiased">
+    <div id="header"></div>
+
+    <!-- Hero Section con Imagen -->
+    <div class="header-curve">
+        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1920" alt="Banner Nosotros"
+            class="header-img">
+        <div class="gradient-overlay"></div>
+        <div class="container mx-auto px-4 pt-20">
+            <h1 class="overlay-text text-5xl md:text-6xl font-bold mb-4">Nosotros</h1>
+        </div>
+        <div class="curve"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 mt-12 mb-12">
+
+        <!-- Misión y Visión -->
+        <section class="grid md:grid-cols-2 gap-8 mb-12">
+            <article>
+                <h2 class="text-blue-600 text-3xl font-bold mb-4">Misión</h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Gestionar que la experiencia laboral sea más equitativa y facilitar una experiencia de reclutamiento
+                    sencilla y sin tanta vuelta.
+                </p>
+            </article>
+            <article>
+                <h2 class="text-green-600 text-3xl font-bold mb-4">Visión</h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    En el 2025, consolidar una marca y ser reconocidos en la región Centro Americana como la SAS más
+                    ágil y humana de servicio de vista favorable para sus afiliados con un alto nivel de marca y
+                    satisfacción a nuestros asociados.
+                </p>
+            </article>
+        </section>
+
+        <!-- Reseña Histórica -->
+        <section class="mb-12">
+            <h2 class="text-blue-600 text-3xl font-bold mb-4">Reseña Histórica</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Desde el 2020, cuando el Sr. Sebastián Castro comenzó desde casa con solo dos personas en Guatemala. Su
+                experiencia en el mercado laboral asiático impulsó un modelo de emprendimiento innovador, estableciendo
+                las bases para lograr una alta participación en la región.
+            </p>
+        </section>
+
+        <!-- Valores e Identidad Corporativa -->
+        <section class="grid md:grid-cols-2 gap-8 mb-12">
+            <article>
+                <h2 class="text-blue-600 text-3xl font-bold mb-4">Valores</h2>
+                <ul class="list-none">
+                    <li class="values-item">
+                        <h5 class="font-semibold text-lg">Respeto</h5>
+                    </li>
+                    <li class="values-item">
+                        <h5 class="font-semibold text-lg">Honestidad</h5>
+                    </li>
+                    <li class="values-item">
+                        <h5 class="font-semibold text-lg">Transparencia</h5>
+                    </li>
+                    <li class="values-item">
+                        <h5 class="font-semibold text-lg">Compromiso</h5>
+                    </li>
+                    <li class="values-item">
+                        <h5 class="font-semibold text-lg">Ética</h5>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <h2 class="text-blue-600 text-3xl font-bold mb-4">Identidad Corporativa</h2>
+                <ul class="list-none space-y-3">
+                    <li class="text-gray-700">• Somos únicos y pioneros, acompañamos a la vida empresarial con valores
+                        sólidos.</li>
+                    <li class="text-gray-700">• Nuestra experiencia en el mercado nos diferencia, compartimos éxitos
+                        laborales.</li>
+                    <li class="text-gray-700">• Nos enfocamos en lo humano, priorizando la experiencia de nuestros
+                        usuarios.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <div id="footer"></div>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="/assets/js/include.js"></script>
+    <script src="/assets/js/index.js"></script>
+
+     <script src="/assets/js/header.js"></script>
+
+      <script>
+        loadHTML('#header', '/partials/header.html', () => {
+            initHeaderScroll();
+            initMobileMenu();
+            initDropdowns();
+        });
+        loadHTML('#footer', '/partials/footer.html');
+    </script>
+
+</body>
+
+</html>
