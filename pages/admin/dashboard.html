@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediFlex - Dashboard Administrador</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Sidebar Backdrop -->
+    <div id="sidebarBackdrop" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden lg:hidden"></div>
+
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="sidebar w-72 bg-white shadow-xl flex flex-col">
+            <!-- Logo/Brand -->
+            <div class="p-6 gradient-bg">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-2xl font-bold text-white">
+                        Medi<span class="text-sky-200">Flex</span>
+                    </h2>
+                    <button id="closeSidebar" class="lg:hidden text-white hover:text-sky-200 transition-colors">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Profile Section -->
+            <div class="p-6 border-b border-gray-200">
+                <div class="bg-gradient-to-br from-sky-50 to-blue-50 rounded-xl p-4 border border-sky-100">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-sky-400 to-blue-500 flex items-center justify-center text-white font-bold text-lg">
+                            JD
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-semibold text-gray-900 text-sm truncate">Juan Pérez</p>
+                            <p class="text-xs text-gray-600">CC 1234567890</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-600 truncate">juan.perez@mediflex.com</p>
+                </div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="flex-1 overflow-y-auto p-4">
+                <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 px-3">Menú Principal</p>
+                <ul class="space-y-1">
+                    <li>
+                        <a href="#" class="nav-link active flex items-center gap-3 px-4 py-3 rounded-lg border-l-4 border-transparent">
+                            <i class="fas fa-home w-5 text-center"></i>
+                            <span class="font-medium">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 border-l-4 border-transparent">
+                            <i class="fas fa-clipboard-list w-5 text-center"></i>
+                            <span class="font-medium">Solicitudes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 border-l-4 border-transparent">
+                            <i class="fas fa-users w-5 text-center"></i>
+                            <span class="font-medium">Gestión de Afiliados</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 border-l-4 border-transparent">
+                            <i class="fas fa-calendar-alt w-5 text-center"></i>
+                            <span class="font-medium">Citas Médicas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 border-l-4 border-transparent">
+                            <i class="fas fa-pills w-5 text-center"></i>
+                            <span class="font-medium">Farmacia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 border-l-4 border-transparent">
+                            <i class="fas fa-images w-5 text-center"></i>
+                            <span class="font-medium">Crear Slider</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Sidebar Footer -->
+            <div class="p-4 border-t border-gray-200">
+                <button class="w-full flex items-center justify-center gap-2 px-4 py-3 text-red-600 hover:bg-red-50 rounded-lg transition-colors font-medium">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Cerrar Sesión</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Header -->
+            <header class="bg-white border-b border-gray-200 px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <button id="sidebarToggle" class="lg:hidden text-gray-600 hover:text-gray-900 transition-colors">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                        <span class="badge-role hidden md:inline-block px-4 py-2 rounded-lg text-white text-sm font-semibold">
+                            Administrador
+                        </span>
+                    </div>
+
+                    <!-- User Dropdown -->
+                    <div class="relative">
+                        <button id="userMenuBtn" class="flex items-center gap-3 hover:bg-gray-50 rounded-lg px-3 py-2 transition-colors">
+                            <span class="hidden sm:block text-sm font-medium text-gray-700">Juan Pérez</span>
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-sky-400 to-blue-500 flex items-center justify-center text-white font-bold">
+                                JP
+                            </div>
+                        </button>
+                        
+                        <!-- Dropdown Menu -->
+                        <div id="userMenu" class="hidden absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-200 py-2 z-50">
+                            <a href="#" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 transition-colors text-gray-700">
+                                <i class="fas fa-user-edit w-5"></i>
+                                <span class="font-medium">Editar Perfil</span>
+                            </a>
+                            <hr class="my-2 border-gray-200">
+                            <a href="#" class="flex items-center gap-3 px-4 py-2.5 hover:bg-red-50 transition-colors text-red-600">
+                                <i class="fas fa-sign-out-alt w-5"></i>
+                                <span class="font-medium">Cerrar Sesión</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="flex-1 overflow-y-auto p-6">
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                    <!-- Total Afiliados -->
+                    <div class="card-hover bg-white rounded-xl shadow-sm border border-gray-100 p-6 cursor-pointer">
+                        <div class="flex items-center gap-4">
+                            <div class="stat-icon w-14 h-14 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-users text-2xl text-sky-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 font-medium mb-1">Total Afiliados</p>
+                                <p class="text-3xl font-bold text-gray-900">1,234</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <p class="text-xs text-green-600 font-medium">
+                                <i class="fas fa-arrow-up mr-1"></i>
+                                +12% este mes
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Citas Programadas -->
+                    <div class="card-hover bg-white rounded-xl shadow-sm border border-gray-100 p-6 cursor-pointer">
+                        <div class="flex items-center gap-4">
+                            <div class="stat-icon w-14 h-14 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-calendar-check text-2xl text-green-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 font-medium mb-1">Citas Programadas</p>
+                                <p class="text-3xl font-bold text-gray-900">89</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <p class="text-xs text-blue-600 font-medium">
+                                <i class="fas fa-calendar mr-1"></i>
+                                Para esta semana
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Solicitudes Pendientes -->
+                    <div class="card-hover bg-white rounded-xl shadow-sm border border-gray-100 p-6 cursor-pointer">
+                        <div class="flex items-center gap-4">
+                            <div class="stat-icon w-14 h-14 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-clipboard-list text-2xl text-amber-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 font-medium mb-1">Solicitudes Pendientes</p>
+                                <p class="text-3xl font-bold text-gray-900">23</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <p class="text-xs text-amber-600 font-medium">
+                                <i class="fas fa-clock mr-1"></i>
+                                Requieren atención
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Medicamentos -->
+                    <div class="card-hover bg-white rounded-xl shadow-sm border border-gray-100 p-6 cursor-pointer">
+                        <div class="flex items-center gap-4">
+                            <div class="stat-icon w-14 h-14 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-pills text-2xl text-purple-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 font-medium mb-1">Medicamentos</p>
+                                <p class="text-3xl font-bold text-gray-900">567</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <p class="text-xs text-gray-600 font-medium">
+                                <i class="fas fa-check-circle mr-1"></i>
+                                En inventario
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solicitudes Pendientes Table -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 mb-6">
+                    <div class="px-6 py-4 border-b border-gray-200">
+                        <h2 class="text-lg font-bold text-gray-900">Solicitudes Pendientes</h2>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-gray-50 border-b border-gray-200">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Nombre</th>
+                                    <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Documento</th>
+                                    <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Zona</th>
+                                    <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 text-sm font-medium text-gray-900">María García López</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">CC 1098765432</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Norte</td>
+                                    <td class="px-6 py-4">
+                                        <span class="inline-flex px-3 py-1 text-xs font-semibold rounded-full bg-amber-100 text-amber-800">
+                                            Pendiente
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 text-sm font-medium text-gray-900">Carlos Rodríguez</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">CC 9876543210</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Sur</td>
+                                    <td class="px-6 py-4">
+                                        <span class="inline-flex px-3 py-1 text-xs font-semibold rounded-full bg-amber-100 text-amber-800">
+                                            Pendiente
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 text-sm font-medium text-gray-900">Ana Martínez Silva</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">CC 5647382910</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Centro</td>
+                                    <td class="px-6 py-4">
+                                        <span class="inline-flex px-3 py-1 text-xs font-semibold rounded-full bg-amber-100 text-amber-800">
+                                            Pendiente
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="px-6 py-4 border-t border-gray-200">
+                        <a href="#" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 hover:text-sky-700 transition-colors">
+                            Ver todas las solicitudes
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Información de Contacto Table -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100">
+                    <div class="px-6 py-4 border-b border-gray-200">
+                        <h2 class="text-lg font-bold text-gray-900">Información de Contacto</h2>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-gray-50 border-b border-gray-200">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Nombre</th>
+                                    <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Documento</th>
+                                    <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Correo</th>
+                                    <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Tipo Solicitud</th>
+                                    <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Mensaje</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 text-sm font-medium text-gray-900">Pedro Sánchez</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">1234567890</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">pedro@email.com</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Consulta General</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Necesito información sobre...</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 text-sm font-medium text-gray-900">Laura Fernández</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">9876543210</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">laura@email.com</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Cita Médica</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Solicito agendar una cita...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-white border-t border-gray-200 px-6 py-4">
+                <p class="text-sm text-gray-600 text-center">
+                    © 2024 MediFlex EPS. Todos los derechos reservados.
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Sidebar Toggle
+        const sidebar = document.getElementById('sidebar');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const closeSidebar = document.getElementById('closeSidebar');
+        const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+
+        function openSidebar() {
+            sidebar.classList.add('active');
+            sidebarBackdrop.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSidebarFunc() {
+            sidebar.classList.remove('active');
+            sidebarBackdrop.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        sidebarToggle.addEventListener('click', openSidebar);
+        closeSidebar.addEventListener('click', closeSidebarFunc);
+        sidebarBackdrop.addEventListener('click', closeSidebarFunc);
+
+        // Close sidebar on link click in mobile
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth < 1024) {
+                    closeSidebarFunc();
+                }
+            });
+        });
+
+        // User Menu Dropdown
+        const userMenuBtn = document.getElementById('userMenuBtn');
+        const userMenu = document.getElementById('userMenu');
+
+        userMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            userMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function() {
+            userMenu.classList.add('hidden');
+        });
+
+        userMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+
+        // Resize handler
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 1024) {
+                closeSidebarFunc();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediFlex - Portal de Pacientes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 50%, #f0f9ff 100%);
+        }
+
+        .gradient-medical {
+            background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+        }
+
+        .mobile-menu {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(-100%);
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .user-dropdown {
+            display: none;
+        }
+
+        .user-dropdown.active {
+            display: block;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2);
+        }
+
+        .stat-card {
+            transition: all 0.4s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .carousel-item {
+            display: none;
+        }
+
+        .carousel-item.active {
+            display: block;
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .pulse-animation {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .8; }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="glass-effect sticky top-0 z-40 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-4">
+                    <div class="relative">
+                        <div class="w-12 h-12 rounded-2xl gradient-medical flex items-center justify-center shadow-lg floating">
+                            <i class="fas fa-heartbeat text-white text-2xl pulse-animation"></i>
+                        </div>
+                        <div class="absolute -top-1 -right-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-white"></div>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-black text-gray-900">MediFlex</h1>
+                        <p class="text-xs text-gray-600 font-medium hidden sm:block">Tu salud es nuestra prioridad</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center gap-1">
+                    <a href="#" class="px-5 py-2.5 rounded-xl text-sm font-semibold text-white gradient-medical shadow-lg"><i class="fas fa-home mr-2"></i>Inicio</a>
+                    <a href="#" class="px-5 py-2.5 rounded-xl text-sm font-semibold text-gray-700 hover:bg-sky-50 hover:text-sky-600 transition-all"><i class="fas fa-calendar-alt mr-2"></i>Ver Citas</a>
+                    <a href="#" class="px-5 py-2.5 rounded-xl text-sm font-semibold text-gray-700 hover:bg-sky-50 hover:text-sky-600 transition-all"><i class="fas fa-plus-circle mr-2"></i>Agendar</a>
+                    <a href="#" class="px-5 py-2.5 rounded-xl text-sm font-semibold text-gray-700 hover:bg-sky-50 hover:text-sky-600 transition-all"><i class="fas fa-history mr-2"></i>Historial</a>
+                    <a href="#" class="px-5 py-2.5 rounded-xl text-sm font-semibold text-gray-700 hover:bg-sky-50 hover:text-sky-600 transition-all"><i class="fas fa-pills mr-2"></i>Medicamentos</a>
+                </nav>
+
+                <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 rounded-xl hover:bg-gray-100 flex items-center justify-center">
+                    <i class="fas fa-bars text-xl text-gray-700"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed inset-y-0 left-0 w-80 glass-effect shadow-2xl z-50">
+        <div class="p-6">
+            <div class="flex justify-between mb-6">
+                <h2 class="text-2xl font-black text-gray-900">MediFlex</h2>
+                <button id="closeMobileMenu" class="w-10 h-10 rounded-xl hover:bg-gray-100 flex items-center justify-center">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+
+            <div class="rounded-2xl p-5 mb-6 gradient-medical">
+                <div class="flex items-center gap-3">
+                    <div class="w-14 h-14 rounded-xl bg-white bg-opacity-20 flex items-center justify-center text-white font-bold text-lg">JP</div>
+                    <div>
+                        <p class="font-bold text-white">Juan Pérez</p>
+                        <p class="text-xs text-sky-100">CC: 1234567890</p>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="space-y-2">
+                <a href="#" class="flex items-center gap-4 px-5 py-4 rounded-xl bg-sky-50 text-sky-600 font-semibold"><i class="fas fa-home"></i>Inicio</a>
+                <a href="#" class="flex items-center gap-4 px-5 py-4 rounded-xl text-gray-700 hover:bg-gray-50"><i class="fas fa-calendar-alt"></i>Ver Citas</a>
+                <a href="#" class="flex items-center gap-4 px-5 py-4 rounded-xl text-gray-700 hover:bg-gray-50"><i class="fas fa-plus-circle"></i>Agendar</a>
+                <a href="#" class="flex items-center gap-4 px-5 py-4 rounded-xl text-gray-700 hover:bg-gray-50"><i class="fas fa-history"></i>Historial</a>
+                <a href="#" class="flex items-center gap-4 px-5 py-4 rounded-xl text-gray-700 hover:bg-gray-50"><i class="fas fa-pills"></i>Medicamentos</a>
+            </nav>
+        </div>
+    </div>
+
+    <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
+    <main class="max-w-7xl mx-auto px-4 py-10">
+        <!-- Stats -->
+        <div class="glass-effect rounded-3xl shadow-xl p-8 mb-10">
+            <h2 class="text-2xl font-black text-gray-900 mb-6"><i class="fas fa-chart-line mr-2 text-sky-600"></i>Mi Resumen Personal</h2>
+            <div class="grid sm:grid-cols-3 gap-6">
+                <div class="stat-card rounded-2xl p-6 shadow-lg" style="background: linear-gradient(135deg, #0ea5e9, #06b6d4);">
+                    <div class="flex justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-white bg-opacity-20 flex items-center justify-center"><i class="fas fa-calendar-day text-white text-2xl"></i></div>
+                        <span class="text-5xl font-black text-white">12</span>
+                    </div>
+                    <p class="font-bold text-white">Citas Programadas</p>
+                    <p class="text-xs text-sky-100">Próximos 30 días</p>
+                </div>
+                <div class="stat-card rounded-2xl p-6 shadow-lg" style="background: linear-gradient(135deg, #10b981, #059669);">
+                    <div class="flex justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-white bg-opacity-20 flex items-center justify-center"><i class="fas fa-pills text-white text-2xl"></i></div>
+                        <span class="text-5xl font-black text-white">8</span>
+                    </div>
+                    <p class="font-bold text-white">Medicamentos</p>
+                    <p class="text-xs text-emerald-100">Tratamiento actual</p>
+                </div>
+                <div class="stat-card rounded-2xl p-6 shadow-lg" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                    <div class="flex justify-between mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-white bg-opacity-20 flex items-center justify-center"><i class="fas fa-calendar-check text-white text-2xl"></i></div>
+                        <span class="text-5xl font-black text-white">45</span>
+                    </div>
+                    <p class="font-bold text-white">Citas Atendidas</p>
+                    <p class="text-xs text-purple-100">Total histórico</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Citas -->
+            <div class="glass-effect rounded-3xl shadow-xl overflow-hidden">
+                <div class="p-6 gradient-medical">
+                    <h3 class="text-xl font-black text-white"><i class="fas fa-calendar-alt mr-2"></i>Citas Próximas</h3>
+                </div>
+                <div class="p-6 space-y-4">
+                    <div class="border-l-4 border-sky-500 bg-sky-50 rounded-xl p-5">
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="font-black text-lg">25/12/2024</p>
+                                <p class="text-sm text-sky-600 font-bold">10:30 AM</p>
+                                <p class="text-xs text-gray-600 mt-2">CONSULTA GENERAL</p>
+                            </div>
+                            <span class="px-4 py-2 bg-sky-500 text-white text-xs font-black rounded-xl h-fit">Confirmada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Medicamentos -->
+            <div class="glass-effect rounded-3xl shadow-xl overflow-hidden">
+                <div class="p-6" style="background: linear-gradient(135deg, #10b981, #059669);">
+                    <h3 class="text-xl font-black text-white"><i class="fas fa-pills mr-2"></i>Medicamentos</h3>
+                </div>
+                <div class="p-6 space-y-4">
+                    <div class="bg-emerald-50 rounded-xl p-5 border-2 border-emerald-200">
+                        <div class="flex justify-between mb-2">
+                            <p class="font-black text-lg">Ibuprofeno 400mg</p>
+                            <span class="px-3 py-1 bg-emerald-500 text-white text-xs font-black rounded-lg">Disponible</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Dosis: 400 mg | Fin: 31/12/2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        const backdrop = document.getElementById('backdrop');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            backdrop.classList.remove('hidden');
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            backdrop.classList.add('hidden');
+        });
+
+        backdrop.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            backdrop.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
