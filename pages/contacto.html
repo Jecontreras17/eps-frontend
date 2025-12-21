@@ -11,8 +11,7 @@
 </head>
 
 <body class="font-sans antialiased bg-gray-50">
-    <!-- Top Banner -->
-    <div class="top-banner">
+        <div class=" top-banner">
         <div class="container mx-auto px-4">
             <div class="flex justify-center items-center gap-4 md:gap-6 flex-wrap text-sm">
                 <span class="flex items-center gap-2">
@@ -32,11 +31,13 @@
     <header class="main-header">
         <div class="container mx-auto px-4">
             <nav class="flex items-center justify-between py-4">
+                <!-- Logo -->
                 <a href="/" class="logo-text">
                     <i class="fas fa-hospital mr-2"></i>
                     <span>MediFlex</span>
                 </a>
 
+                <!-- Desktop Menu -->
                 <ul class="hidden lg:flex items-center gap-8">
                     <li><a href="./index.html" class="nav-link">Inicio</a></li>
                     <li><a href="./nosotros.html" class="nav-link">Nosotros</a></li>
@@ -65,11 +66,15 @@
                     <li><a href="./contacto.html" class="nav-link">Contacto</a></li>
                 </ul>
 
-                <button class="hidden lg:flex btn-portal">
-                    <i class="fas fa-user-circle"></i>
-                    Portal Pacientes
-                </button>
+             <a href="login.html" class="hidden lg:inline-block">
+                    <button class="flex btn-portal w-full">
+                        <i class="fas fa-user-circle"></i>
+                        Portal Pacientes
+                    </button>
+                </a>
 
+
+                <!-- Mobile Menu Button -->
                 <button class="lg:hidden text-primary text-2xl p-2" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -102,16 +107,15 @@
                         <li><a href="./farmacia.html"><i class="fas fa-pills mr-2"></i>Farmacia</a></li>
                     </ul>
                 </li>
-                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="#">Contacto</a></li>
             </ul>
-            <button class="btn-portal mt-6 justify-center">
+          <a href="login.html" class="btn-portal mt-6 justify-center">
                 <i class="fas fa-user-circle"></i>
                 Portal Pacientes
-            </button>
+            </a>
         </div>
     </div>
 
-    <!-- Emergency Banner -->
 
 
     <!-- Hero Section -->

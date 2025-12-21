@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediFlex EPS - Portal Pacientes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>        
+<body class="bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50">
+    <!-- Breadcrumb -->
+    <nav class="absolute top-6 left-6 z-20 glass-effect px-4 py-2.5 rounded-xl shadow-sm border border-white/50">
+        <ol id="breadcrumb" class="flex items-center gap-2 text-sm font-medium">
+            <li><a href="#" id="breadcrumb-back" class="text-sky-600 hover:text-sky-700 transition-colors">Inicio</a></li>
+            <li class="text-gray-400">/</li>
+            <li class="text-gray-700">Portal paciente</li>
+        </ol>
+    </nav>
+
+    <div class="min-h-screen flex items-center justify-center p-4 md:p-8">
+        <div class="w-full max-w-6xl grid md:grid-cols-2 gap-8 items-center">
+            
+            <!-- Left Section - Information -->
+            <div class="hidden md:block space-y-8">
+                <div class="space-y-4">
+                    <h1 class="text-5xl font-bold text-gray-900 leading-tight">
+                        Bienvenido a<br/>
+                        <span class="gradient-text">MediFlex EPS</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        Gestiona tus citas, consulta tu historia clínica y accede a todos tus servicios de salud desde un solo lugar.
+                    </p>
+                </div>
+
+                <!-- Features -->
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-white/70 backdrop-blur-sm shadow-sm border border-white/80">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Agenda tus citas</h3>
+                            <p class="text-sm text-gray-600">Programa consultas médicas en línea de forma rápida</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-white/70 backdrop-blur-sm shadow-sm border border-white/80">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-medical"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Historia clínica digital</h3>
+                            <p class="text-sm text-gray-600">Consulta tu historial médico completo y seguro</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-white/70 backdrop-blur-sm shadow-sm border border-white/80">
+                        <div class="feature-icon">
+                            <i class="fas fa-prescription-bottle-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Medicamentos y fórmulas</h3>
+                            <p class="text-sm text-gray-600">Accede a tus prescripciones médicas digitales</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Section - Login Form -->
+            <div class="w-full max-w-md mx-auto">
+                <div class="glass-effect rounded-2xl shadow-2xl border border-white/50 p-8 md:p-10">
+                    
+                    <!-- Logo -->
+                    <div class="text-center mb-8">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-2xl gradient-medical flex items-center justify-center shadow-lg">
+                            <i class="fas fa-hospital-user text-3xl text-white"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Iniciar sesión</h2>
+                        <p class="text-sm text-gray-600">Accede a tu portal de paciente</p>
+                    </div>
+                    
+                    <!-- Step Indicator -->
+                    <div class="step-indicator flex items-center justify-center mb-8 relative">
+                        <div class="step-line"></div>
+                        <div class="flex items-center gap-4 relative z-10">
+                            <div class="step-circle w-10 h-10 rounded-full gradient-medical text-white flex items-center justify-center font-semibold shadow-lg">
+                                1
+                            </div>
+                            <div class="step-circle w-10 h-10 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center font-semibold">
+                                2
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Form -->
+                    <form id="login-form" class="space-y-5">
+                        <!-- Step 1 -->
+                        <div class="form-step active" id="step1">
+                            <div class="space-y-5">
+                                <div>
+                                    <label for="tipo_documento" class="block mb-2 font-semibold text-gray-700 text-sm">
+                                        Tipo de documento
+                                    </label>
+                                    <select id="tipo_documento" 
+                                            class="form-control w-full px-4 py-3.5 text-sm border-2 border-gray-200 rounded-xl bg-white transition-all font-medium" 
+                                            required>
+                                        <option value="" disabled selected>Seleccione el tipo de documento</option>
+                                        <option value="CC">Cédula de Ciudadanía</option>
+                                        <option value="TI">Tarjeta de Identidad</option>
+                                        <option value="CE">Cédula de Extranjería</option>
+                                        <option value="PP">Pasaporte</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        Seleccione un tipo de documento
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="numero_documento" class="block mb-2 font-semibold text-gray-700 text-sm">
+                                        Número de documento
+                                    </label>
+                                    <input type="number" 
+                                           id="numero_documento" 
+                                           class="form-control w-full px-4 py-3.5 text-sm border-2 border-gray-200 rounded-xl bg-white transition-all font-medium" 
+                                           placeholder="Ingrese su número de documento" 
+                                           required>
+                                    <div class="invalid-feedback">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        Ingrese su número de documento
+                                    </div>
+                                </div>
+                                
+                                <button type="button" 
+                                        id="nextButton" 
+                                        class="btn-primary w-full py-3.5 text-white font-semibold rounded-xl shadow-lg">
+                                    Continuar
+                                    <i class="fas fa-arrow-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2 -->
+                        <div class="form-step" id="step2">
+                            <div class="space-y-5">
+                                <div>
+                                    <label for="password" class="block mb-2 font-semibold text-gray-700 text-sm">
+                                        Contraseña
+                                    </label>
+                                    <input type="password" 
+                                           id="password" 
+                                           class="form-control w-full px-4 py-3.5 text-sm border-2 border-gray-200 rounded-xl bg-white transition-all font-medium" 
+                                           placeholder="Ingrese su contraseña" 
+                                           required 
+                                           autocomplete="off">
+                                    <div class="invalid-feedback">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        Ingrese su contraseña
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" 
+                                        class="btn-primary w-full py-3.5 text-white font-semibold rounded-xl shadow-lg">
+                                    <i class="fas fa-sign-in-alt mr-2"></i>
+                                    Iniciar sesión
+                                </button>
+                                <button type="button" 
+                                        id="backButton" 
+                                        class="w-full py-3.5 text-gray-700 font-semibold rounded-xl bg-gray-100 hover:bg-gray-200 transition-all duration-300">
+                                    <i class="fas fa-arrow-left mr-2"></i>
+                                    Volver
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <!-- Help Text -->
+                    <div class="mt-6 pt-6 border-t border-gray-200 text-center space-y-2">
+                        <a href="#" class="block text-sm text-sky-600 font-semibold hover:text-sky-700 transition-colors">
+                            <i class="fas fa-lock mr-1"></i>
+                            ¿Olvidó su contraseña?
+                        </a>
+                        <p class="text-xs text-gray-500">
+                            ¿Primera vez? <a href="#" class="text-sky-600 font-semibold hover:underline">Regístrate aquí</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Footer Info -->
+                <div class="mt-6 text-center">
+                    <p class="text-xs text-gray-600">
+                        <i class="fas fa-shield-alt text-sky-600 mr-1"></i>
+                        Tus datos están protegidos bajo el codigo de privacidad de MediFlex EPS.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // ====== BREADCRUMB DINÁMICO ======
+            const breadcrumbBack = document.getElementById('breadcrumb-back');
+            const referrer = document.referrer;
+            
+            // Mapeo de páginas
+            const pageNames = {
+                'index.html': 'Inicio',
+                'nosotros.html': 'Nosotros',
+                'consulta.html': 'Consulta General',
+                'urgencia.html': 'Urgencias 24/7',
+                'farmacia.html': 'Farmacia',
+                'servicios.html': 'Servicios',
+                'contacto.html': 'Contacto'
+            };
+            
+            // Si viene de otra página del mismo sitio
+            if (referrer && referrer.includes(globalThis.location.hostname)) {
+                // Extraer el nombre del archivo de la URL referrer
+                const referrerPath = new URL(referrer).pathname;
+                const referrerPage = referrerPath.split('/').pop() || 'index.html';
+                
+                // Actualizar el texto y el link del breadcrumb
+                if (pageNames[referrerPage]) {
+                    breadcrumbBack.textContent = pageNames[referrerPage];
+                    breadcrumbBack.href = referrerPage;
+                } else {
+                    // Si no reconoce la página, usar history.back()
+                    breadcrumbBack.textContent = 'Volver';
+                    breadcrumbBack.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        globalThis.history.back();
+                    });
+                }
+            } else {
+                // Si no hay referrer o viene de otro sitio, ir a inicio
+                breadcrumbBack.href = 'index.html';
+            }
+            
+            // ====== LÓGICA DEL FORMULARIO ======
+            const step1 = document.getElementById('step1');
+            const step2 = document.getElementById('step2');
+            const nextButton = document.getElementById('nextButton');
+            const backButton = document.getElementById('backButton');
+            const stepCircles = document.querySelectorAll('.step-circle');
+            const stepLine = document.querySelector('.step-line');
+            
+            function validateStep1() {
+                const tipoDocumento = document.getElementById('tipo_documento');
+                const numeroDocumento = document.getElementById('numero_documento');
+                let isValid = true;
+                
+                if (tipoDocumento.value) {
+                    tipoDocumento.classList.remove('is-invalid');
+                } else {
+                    tipoDocumento.classList.add('is-invalid');
+                    isValid = false;
+                }
+                
+                if (numeroDocumento.value) {
+                    numeroDocumento.classList.remove('is-invalid');
+                } else {
+                    numeroDocumento.classList.add('is-invalid');
+                    isValid = false;
+                }
+                
+                return isValid;
+            }
+            
+            nextButton.addEventListener('click', function() {
+                if (validateStep1()) {
+                    step1.classList.remove('active');
+                    step2.classList.add('active');
+                    
+                    stepCircles[0].classList.remove('gradient-medical');
+                    stepCircles[0].classList.add('bg-sky-100', 'text-sky-600');
+                    stepCircles[1].classList.remove('bg-gray-200', 'text-gray-500');
+                    stepCircles[1].classList.add('gradient-medical', 'text-white', 'shadow-lg');
+                    stepLine.classList.add('active');
+                }
+            });
+            
+            backButton.addEventListener('click', function() {
+                step2.classList.remove('active');
+                step1.classList.add('active');
+                
+                stepCircles[1].classList.remove('gradient-medical', 'text-white', 'shadow-lg');
+                stepCircles[1].classList.add('bg-gray-200', 'text-gray-500');
+                stepCircles[0].classList.remove('bg-sky-100', 'text-sky-600');
+                stepCircles[0].classList.add('gradient-medical');
+                stepLine.classList.remove('active');
+            });
+            
+            document.getElementById('login-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const password = document.getElementById("password");
+                let isValid = true;
+                
+                if (password.value) {
+                    password.classList.remove('is-invalid');
+                } else {
+                    password.classList.add('is-invalid');
+                    isValid = false;
+                }
+                
+                if (!isValid) return;
+                
+                const data = {
+                    tipo_documento: document.getElementById("tipo_documento").value,
+                    numero_documento: document.getElementById("numero_documento").value,
+                    password: password.value
+                };
+                
+                console.log("Datos de login:", data);
+                alert('Función de login lista para conectar con tu API');
+                
+                // Aquí conectas tu API
+                // fetch('https://tu-api.com/login', {
+                //     method: 'POST',
+                //     headers: { 'Content-Type': 'application/json' },
+                //     body: JSON.stringify(data)
+                // })
+                // .then(response => response.json())
+                // .then(result => {
+                //     if (result.success) {
+                //         window.location.href = 'dashboard.html';
+                //     } else {
+                //         alert(result.message);
+                //     }
+                // })
+                // .catch(error => {
+                //     console.error('Error:', error);
+                //     alert('Error al iniciar sesión. Intente nuevamente.');
+                // });
+            });
+            
+            // Remove validation on input
+            const formInputs = document.querySelectorAll('.form-control');
+            formInputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    if (this.value) {
+                        this.classList.remove('is-invalid');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

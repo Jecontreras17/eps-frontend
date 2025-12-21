@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Afiliados - MediFlex EPS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <style>
+      
+       
+    </style>
+</head>
+<body>
+    <div class="header-curve">
+        <div class="gradient-overlay"></div>
+        <div class="container mx-auto px-4 pt-5">
+            <nav class="breadcrumb-custom">
+                <a href="#" id="breadcrumb-back">Inicio</a>
+                <span class="mx-2">/</span>
+                <span>Formulario de afiliados</span>
+            </nav>
+        </div>
+        <div class="curve-bottom"></div>
+    </div>
+
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="form-container">
+                <div class="grid lg:grid-cols-12">
+                    <!-- Left decorative panel -->
+                    <div class="lg:col-span-4 left-panel">
+                        <h2 class="text-white font-bold text-3xl text-center relative z-10">
+                            Programa de Salud MediFlex
+                        </h2>
+                    </div>
+                    
+                    <!-- Form panel -->
+                    <div class="lg:col-span-8 form-panel">
+                        <h1 class="form-title">Registro de Afiliados</h1>
+                        
+                        <form id="registroForm">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <!-- Tipo de documento y número -->
+                                <div>
+                                    <label for="tipo_documento" class="form-label">Tipo de Documento</label>
+                                    <select id="tipo_documento" class="form-select w-full" required>
+                                        <option value="" disabled selected>Seleccione una opción</option>
+                                        <option value="CC">Cédula de Ciudadanía</option>
+                                        <option value="TI">Tarjeta de Identidad</option>
+                                        <option value="CE">Cédula de Extranjería</option>
+                                        <option value="PP">Pasaporte</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label for="documentNumber" class="form-label">Número de Documento</label>
+                                    <input type="number" class="form-control w-full" id="documentNumber" placeholder="Ingrese su número" required>
+                                </div>
+                                
+                                <!-- Fechas -->
+                                <div>
+                                    <label for="fecha_expedicion" class="form-label">Fecha de Expedición</label>
+                                    <input type="date" class="form-control w-full" id="fecha_expedicion" required>
+                                </div>
+                                
+                                <div>
+                                    <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
+                                    <input type="date" class="form-control w-full" id="fecha_nacimiento" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <p><i class="fas fa-user mr-2"></i>Información Personal</p>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="primer_apellido" class="form-label">Primer Apellido</label>
+                                    <input type="text" class="form-control w-full" id="primer_apellido" placeholder="Primer apellido" required>
+                                </div>
+                                
+                                <div>
+                                    <label for="segundo_apellido" class="form-label">Segundo Apellido</label>
+                                    <input type="text" class="form-control w-full" id="segundo_apellido" placeholder="Segundo apellido">
+                                </div>
+                                
+                                <div>
+                                    <label for="primer_nombre" class="form-label">Primer Nombre</label>
+                                    <input type="text" class="form-control w-full" id="primer_nombre" placeholder="Primer nombre" required>
+                                </div>
+                                
+                                <div>
+                                    <label for="segundo_nombre" class="form-label">Segundo Nombre</label>
+                                    <input type="text" class="form-control w-full" id="segundo_nombre" placeholder="Segundo nombre">
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <p><i class="fas fa-address-book mr-2"></i>Información de Contacto</p>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="departamento" class="form-label">Departamento</label>
+                                    <input type="text" class="form-control w-full" id="departamento" placeholder="Departamento" required>
+                                </div>
+                                
+                                <div>
+                                    <label for="direccion" class="form-label">Dirección</label>
+                                    <input type="text" class="form-control w-full" id="direccion" placeholder="Dirección completa" required>
+                                </div>
+                                
+                                <div>
+                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <input type="tel" class="form-control w-full" id="telefono" placeholder="Número de contacto" required>
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control w-full" id="email" placeholder="correo@ejemplo.com" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <p><i class="fas fa-info-circle mr-2"></i>Información Adicional</p>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-3 gap-4 mb-4">
+                                <div>
+                                    <label class="form-label">Zona</label>
+                                    <div class="flex gap-4 mt-2">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="zona" id="zona_rural" value="rural" required>
+                                            <label class="form-check-label ml-2" for="zona_rural">Rural</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="zona" id="zona_urbana" value="urbana">
+                                            <label class="form-check-label ml-2" for="zona_urbana">Urbana</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label class="form-label">Sexo</label>
+                                    <div class="flex gap-4 mt-2">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="sexo" id="sexo_f" value="Femenino" required>
+                                            <label class="form-check-label ml-2" for="sexo_f">Femenino</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="sexo" id="sexo_m" value="Masculino">
+                                            <label class="form-check-label ml-2" for="sexo_m">Masculino</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="sisben" class="form-label">¿Tiene ficha del SISBEN?</label>
+                                    <select id="sisben" name="sisben" class="form-select w-full">
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="Grupo A">Grupo A</option>
+                                        <option value="Grupo B">Grupo B</option>
+                                        <option value="Grupo C">Grupo C</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="form-check flex items-start">
+                                    <input class="form-check-input mt-1" type="checkbox" id="aceptarTerminos" required>
+                                    <label class="form-check-label ml-2 text-sm" for="aceptarTerminos">
+                                        Acepto los <a href="#" class="text-sky-600 hover:underline" data-modal="terminos">Términos y Condiciones</a> y la <a class="text-sky-600 hover:underline">Política de Privacidad</a>.
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-center mt-6">
+                                <button type="submit" class="btn-submit">
+                                    <i class="fas fa-save mr-2"></i> Guardar Registro
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Términos -->
+    <div id="modalTerminos" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-hidden shadow-2xl">
+            <div class="bg-gradient-to-r from-sky-500 to-blue-600 text-white p-6">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-2xl font-bold">Términos y Condiciones</h3>
+                    <button class="text-white hover:text-gray-200 text-3xl" onclick="closeModal()">&times;</button>
+                </div>
+            </div>
+            <div class="p-6 overflow-y-auto" style="max-height: calc(80vh - 140px);">
+                <h4 class="font-bold text-lg mb-3">1. Aceptación de Términos</h4>
+                <p class="mb-4 text-gray-700">Al registrarse en MediFlex EPS, usted acepta los siguientes términos y condiciones...</p>
+                
+                <h4 class="font-bold text-lg mb-3">2. Protección de Datos</h4>
+                <p class="mb-4 text-gray-700">Sus datos personales serán tratados conforme a la Ley 1581 de 2012 de protección de datos personales...</p>
+                
+                <h4 class="font-bold text-lg mb-3">3. Derechos y Deberes</h4>
+                <p class="mb-4 text-gray-700">Como afiliado a MediFlex EPS, usted tiene derecho a recibir atención médica de calidad...</p>
+            </div>
+            <div class="p-6 border-t flex justify-end">
+                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 mr-3" onclick="closeModal()">Cerrar</button>
+                <button class="px-6 py-2 bg-sky-500 text-white rounded-lg hover:bg-sky-600" onclick="acceptTerms()">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-gradient text-white py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Servicios -->
+                <section>
+                    <h5 class="border-b border-white/20 pb-3 mb-4 font-bold text-lg">Servicios</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link hover:text-sky-400 transition-colors">Citas Médicas</a></li>
+                        <li><a href="#" class="footer-link hover:text-sky-400 transition-colors">Urgencias 24/7</a></li>
+                        <li><a href="#" class="footer-link hover:text-sky-400 transition-colors">Laboratorio Clínico</a></li>
+                        <li><a href="#" class="footer-link hover:text-sky-400 transition-colors">Telemedicina</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h5 class="border-b border-white/20 pb-3 mb-4 font-bold text-lg">Enlaces Rápidos</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link hover:text-sky-400 transition-colors">Portal del Paciente</a></li>
+                        <li><a href="#" class="footer-link hover:text-sky-400 transition-colors">PQR</a></li>
+                        <li><a href="#" class="footer-link hover:text-sky-400 transition-colors">Trabaja con Nosotros</a></li>
+                        <li><a href="#" class="footer-link hover:text-sky-400 transition-colors">Afiliaciones</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h5 class="border-b border-white/20 pb-3 mb-4 font-bold text-lg">Contacto</h5>
+                    <ul class="space-y-3 mb-4">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-sky-400"></i>
+                            (123) 456-7890
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-sky-400"></i>
+                            contacto@mediflex.com
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 text-sky-400 mt-1"></i>
+                            Calle Principal #123<br>Ciudad, País
+                        </li>
+                    </ul>
+                    <div class="emergency-section p-4 rounded-lg">
+                        <h6 class="text-sky-400 font-bold mb-2">
+                            <i class="fas fa-ambulance mr-2"></i>
+                            Emergencias 24/7
+                        </h6>
+                        <p class="text-2xl font-bold">018000 123 456</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h5 class="border-b border-white/20 pb-3 mb-4 font-bold text-lg">Síguenos</h5>
+                    <div class="flex gap-4 mb-6">
+                        <a href="#" class="social-icon w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-sky-500 transition-all">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="social-icon w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-sky-500 transition-all">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="social-icon w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-sky-500 transition-all">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="social-icon w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-sky-500 transition-all">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="bg-black/20 mt-8">
+            <div class="container mx-auto px-4 py-4">
+                <div class="md:flex justify-between items-center text-center md:text-left">
+                    <small>© 2025 MediFlex EPS. Todos los derechos reservados.</small>
+                    <div class="mt-3 md:mt-0">
+                        <a href="#" class="footer-link hover:text-sky-400 mr-4 text-sm">Términos y Condiciones</a>
+                        <a href="#" class="footer-link hover:text-sky-400 text-sm">Política de Privacidad</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Breadcrumb dinámico
+        document.addEventListener('DOMContentLoaded', function() {
+            const breadcrumbBack = document.getElementById('breadcrumb-back');
+            const referrer = document.referrer;
+            
+            const pageNames = {
+                'index.html': 'Inicio',
+                'nosotros.html': 'Nosotros',
+                'servicios.html': 'Servicios',
+                'contacto.html': 'Contacto',
+                'login.html': 'Portal Paciente'
+            };
+            
+            if (referrer && referrer.includes(window.location.hostname)) {
+                const referrerPath = new URL(referrer).pathname;
+                const referrerPage = referrerPath.split('/').pop() || 'index.html';
+                
+                if (pageNames[referrerPage]) {
+                    breadcrumbBack.textContent = pageNames[referrerPage];
+                    breadcrumbBack.href = referrerPage;
+                } else {
+                    breadcrumbBack.textContent = 'Volver';
+                    breadcrumbBack.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        window.history.back();
+                    });
+                }
+            } else {
+                breadcrumbBack.href = 'index.html';
+            }
+        });
+
+        // Modal de términos
+        document.querySelectorAll('[data-modal="terminos"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('modalTerminos').classList.remove('hidden');
+            });
+        });
+
+        function closeModal() {
+            document.getElementById('modalTerminos').classList.add('hidden');
+        }
+
+        function acceptTerms() {
+            document.getElementById('aceptarTerminos').checked = true;
+            closeModal();
+        }
+
+        // Formulario
+        document.getElementById('registroForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                tipo_documento: document.getElementById('tipo_documento').value,
+                numero_documento: document.getElementById('documentNumber').value,
+                fecha_expedicion: document.getElementById('fecha_expedicion').value,
+                fecha_nacimiento: document.getElementById('fecha_nacimiento').value,
+                primer_apellido: document.getElementById('primer_apellido').value,
+                segundo_apellido: document.getElementById('segundo_apellido').value,
+                primer_nombre: document.getElementById('primer_nombre').value,
+                segundo_nombre: document.getElementById('segundo_nombre').value,
+                departamento: document.getElementById('departamento').value,
+                direccion: document.getElementById('direccion').value,
+                telefono: document.getElementById('telefono').value,
+                email: document.getElementById('email').value,
+                zona: document.querySelector('input[name="zona"]:checked')?.value,
+                sexo: document.querySelector('input[name="sexo"]:checked')?.value,
+                sisben: document.getElementById('sisben').value
+            };
+            
+            console.log('Datos del formulario:', formData);
+            
+            // Aquí conectas tu API
+            // fetch('https://tu-api.com/registro', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify(formData)
+            // })
+            // .then(response => response.json())
+            // .then(result => {
+            //     if (result.success) {
+            //         alert('Registro exitoso');
+            //         window.location.href = 'confirmacion.html';
+            //     } else {
+            //         alert('Error: ' + result.message);
+            //     }
+            // });
+            
+            alert('Formulario listo para enviar a tu API');
+        });
+    </script>
+</body>
+</html>

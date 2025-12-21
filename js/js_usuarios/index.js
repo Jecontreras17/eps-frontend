@@ -212,7 +212,6 @@ function initScrollEffects() {
 
     if (!banner || !header) return;
 
-    const bannerHeight = banner.offsetHeight;
 
     function onScroll() {
         if (window.scrollY > 50) {
